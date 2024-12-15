@@ -1,0 +1,255 @@
+footer .footer-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 80px 120px;
+  background-color: #f3c914;
+  align-items: stretch;
+}
+footer .footer-main .footer-contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0;
+}
+footer .footer-main .footer-contacts h2 {
+  font-family: "Open Sans";
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 61.06px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: rgb(30, 31, 36);
+}
+footer .footer-main .footer-contacts nav ul {
+  display: flex;
+  justify-content: flex-start;
+  gap: 24px;
+}
+footer .footer-main .footer-contacts nav ul li {
+  width: 59px;
+  height: 59px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .footer-main .footer-contacts nav ul li a img {
+  display: block;
+  max-width: 35px;
+  max-width: 35px;
+}
+footer .footer-main .in-ua,
+footer .footer-main .in-czech-republic {
+  width: 100%;
+  max-width: 308px;
+  min-width: 250px;
+}
+footer .footer-main .in-ua h3,
+footer .footer-main .in-czech-republic h3 {
+  font-family: "Open Sans";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40.7px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: rgb(30, 31, 36);
+  padding: 15px 0px 8px 0px;
+  border-bottom: 1px solid #1e1f24;
+}
+footer .footer-main .in-ua .wrapper-info,
+footer .footer-main .in-czech-republic .wrapper-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+footer .footer-main .in-ua .wrapper-info .adress,
+footer .footer-main .in-ua .wrapper-info .work-schedule,
+footer .footer-main .in-ua .wrapper-info .phone,
+footer .footer-main .in-czech-republic .wrapper-info .adress,
+footer .footer-main .in-czech-republic .wrapper-info .work-schedule,
+footer .footer-main .in-czech-republic .wrapper-info .phone {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+footer .footer-main .in-ua .wrapper-info .adress h4,
+footer .footer-main .in-ua .wrapper-info .work-schedule h4,
+footer .footer-main .in-ua .wrapper-info .phone h4,
+footer .footer-main .in-czech-republic .wrapper-info .adress h4,
+footer .footer-main .in-czech-republic .wrapper-info .work-schedule h4,
+footer .footer-main .in-czech-republic .wrapper-info .phone h4 {
+  color: rgb(30, 31, 36);
+  font-family: "Open Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  align-self: stretch;
+}
+footer .footer-main .in-ua .wrapper-info .adress a,
+footer .footer-main .in-ua .wrapper-info .adress p,
+footer .footer-main .in-ua .wrapper-info .work-schedule a,
+footer .footer-main .in-ua .wrapper-info .work-schedule p,
+footer .footer-main .in-ua .wrapper-info .phone a,
+footer .footer-main .in-ua .wrapper-info .phone p,
+footer .footer-main .in-czech-republic .wrapper-info .adress a,
+footer .footer-main .in-czech-republic .wrapper-info .adress p,
+footer .footer-main .in-czech-republic .wrapper-info .work-schedule a,
+footer .footer-main .in-czech-republic .wrapper-info .work-schedule p,
+footer .footer-main .in-czech-republic .wrapper-info .phone a,
+footer .footer-main .in-czech-republic .wrapper-info .phone p {
+  text-decoration: none;
+  color: rgb(30, 31, 36);
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+footer .footer-info {
+  padding: 20px 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+footer .footer-info p {
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.35px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: rgb(30, 31, 36);
+}
+
+@media (max-width: 1350px) {
+  footer .footer-main {
+    padding: 40px 60px;
+  }
+  footer .footer-main .in-ua,
+  footer .footer-main .in-czech-republic {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  footer .footer-info {
+    padding: 40px 60px;
+  }
+}
+@media (max-width: 1080px) {
+  footer .footer-main {
+    flex-direction: column;
+  }
+  footer .footer-main .footer-contacts {
+    gap: 32px;
+  }
+  footer .footer-main .in-ua,
+  footer .footer-main .in-czech-republic {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  footer .footer-main .footer-contacts nav ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  footer .footer-main .footer-contacts nav ul li {
+    width: 59px;
+    height: 59px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .footer-main .footer-contacts nav ul li a img {
+    display: block;
+    max-width: 35px;
+    max-width: 35px;
+  }
+  footer .footer-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-info p {
+    text-align: center;
+  }
+}
+@media (max-width: 550px) {
+  footer .footer-main {
+    padding: 50px 16px;
+  }
+  footer .footer-main .footer-contacts h2 {
+    font-size: 32px;
+  }
+  footer .footer-main .in-ua h3,
+  footer .footer-main .in-czech-republic h3 {
+    font-size: 26px;
+  }
+  footer .footer-main .in-ua .wrapper-info,
+  footer .footer-main .in-czech-republic .wrapper-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  footer .footer-main .in-ua .wrapper-info .adress h4,
+  footer .footer-main .in-ua .wrapper-info .work-schedule h4,
+  footer .footer-main .in-ua .wrapper-info .phone h4,
+  footer .footer-main .in-czech-republic .wrapper-info .adress h4,
+  footer .footer-main .in-czech-republic .wrapper-info .work-schedule h4,
+  footer .footer-main .in-czech-republic .wrapper-info .phone h4 {
+    font-size: 20px;
+  }
+  footer .footer-main .in-ua .wrapper-info .adress a,
+  footer .footer-main .in-ua .wrapper-info .adress p,
+  footer .footer-main .in-ua .wrapper-info .work-schedule a,
+  footer .footer-main .in-ua .wrapper-info .work-schedule p,
+  footer .footer-main .in-ua .wrapper-info .phone a,
+  footer .footer-main .in-ua .wrapper-info .phone p,
+  footer .footer-main .in-czech-republic .wrapper-info .adress a,
+  footer .footer-main .in-czech-republic .wrapper-info .adress p,
+  footer .footer-main .in-czech-republic .wrapper-info .work-schedule a,
+  footer .footer-main .in-czech-republic .wrapper-info .work-schedule p,
+  footer .footer-main .in-czech-republic .wrapper-info .phone a,
+  footer .footer-main .in-czech-republic .wrapper-info .phone p {
+    font-size: 14px;
+  }
+  footer .footer-info {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 450px) {
+  footer .footer-main .footer-contacts nav ul {
+    gap: 16px;
+  }
+  footer .footer-main .footer-contacts nav ul li {
+    width: 45px;
+    height: 45px;
+  }
+  footer .footer-main .footer-contacts nav ul li a img {
+    display: block;
+    max-width: 27px;
+    max-width: 27px;
+  }
+}

@@ -1,0 +1,19 @@
+footer {
+  background-color: #f3c914;
+}
+footer .footer-contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer .footer-contacts h2 {
+  font-family: "Open Sans";
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 61.06px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: rgb(30, 31, 36);
+}
