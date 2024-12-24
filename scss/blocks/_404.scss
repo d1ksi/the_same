@@ -1,0 +1,192 @@
+.page-404-scroll {
+  overflow: hidden;
+  .page-404 {
+    padding: 0px 120px;
+    width: 100%;
+    height: 100vh;
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      .wrap-nlo {
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 315px;
+        gap: 180px;
+        .nlo {
+          z-index: 9;
+        }
+        .box {
+          z-index: 9;
+          width: 296px;
+        }
+        svg {
+          width: 413px;
+          height: 429px;
+          margin-top: 217px;
+          fill: linear-gradient(
+            180deg,
+            #f2f2f5 0%,
+            rgba(255, 255, 255, 0.06) 100%
+          );
+          opacity: 0.3;
+          backdrop-filter: blur(4px);
+        }
+      }
+      svg {
+        position: absolute;
+        width: calc(100% - 240px);
+        height: auto;
+      }
+      section {
+        max-width: 448px;
+        z-index: 4;
+        h1 {
+          color: var(--Accesible-text-Main-1E1F24, #1e1f24);
+          font-family: "Open Sans";
+          font-size: 48px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+        p {
+          margin-top: 16px;
+          color: var(--Accesible-text-Main-1E1F24, #1e1f24);
+          font-family: "Open Sans";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+        button {
+          cursor: pointer;
+          margin-top: 34px;
+          height: 54px;
+          border: none;
+          border-radius: 26.5px;
+          background: linear-gradient(0deg, #1a64db 0%, #1a64db 100%),
+            linear-gradient(0deg, #0b449d 0%, #0b449d 100%),
+            linear-gradient(93deg, #000 39.62%, #0b449d 90.15%, #0b449d 90.15%);
+          box-shadow: 0px -6px 8px 0px rgba(255, 255, 255, 0.25) inset;
+          color: #fff;
+          text-align: center;
+          // font-family: Ermilov;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          letter-spacing: 0.3px;
+          text-transform: uppercase;
+          padding: 20px 24px;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+  .page-404-scroll {
+    overflow: hidden;
+    .page-404 {
+      padding: 0px 60px;
+      .container {
+        width: 100vw;
+        height: 100vh;
+        .wrap-nlo {
+          margin-right: 100px;
+          gap: 60px;
+          img {
+            width: 480px;
+          }
+          .box {
+            width: 250px;
+          }
+        }
+        svg {
+          width: calc(100% - 120px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .page-404-scroll {
+    overflow-y: scroll;
+    .page-404 {
+      width: 100%;
+      height: 100%;
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        width: 100%;
+        height: 100%;
+        position: static;
+        .wrap-nlo {
+          margin: 0;
+          margin-top: 96px;
+          gap: 40px;
+          img {
+            width: 380px;
+          }
+          .box {
+            width: 180px;
+          }
+        }
+        svg {
+          top: 200px;
+        }
+      }
+      section {
+        text-align: center;
+        max-width: 448px;
+        z-index: 4;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .page-404-scroll {
+    overflow-y: scroll;
+    .page-404 {
+      padding: 0px 16px;
+      .container {
+        .wrap-nlo {
+          margin: 0;
+          margin-top: 56px;
+          gap: 40px;
+          img {
+            width: 280px;
+          }
+          .box {
+            width: 100px;
+          }
+        }
+        svg {
+          top: 140px;
+          width: calc(100% - 32px);
+        }
+      }
+      section {
+        text-align: center;
+        max-width: 448px;
+        z-index: 4;
+        h1 {
+          font-size: 32px;
+        }
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

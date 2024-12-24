@@ -5,6 +5,9 @@ header {
   width: 100%;
   z-index: 1000;
   background: var(--Background-White-FFFFFF, #fff);
+  &.pages {
+    background: #f3c914;
+  }
   .container {
     width: 100%;
     height: 75px;
@@ -152,6 +155,9 @@ header {
           display: flex;
           align-items: center;
           gap: 4px;
+          &.pages {
+            border-left: 1px solid #fff;
+          }
           .selected {
             color: var(--Accesible-text-Main-1E1F24, #1e1f24);
             // font-family: "Ermilov";
@@ -355,7 +361,7 @@ header {
   }
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 550px) {
   header {
     .container {
       padding: 0px 16px;
