@@ -596,7 +596,6 @@ body main .chat {
 }
 body main .main-nav {
   width: 100%;
-  margin-top: 24px;
 }
 body main .main-nav p {
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
@@ -771,9 +770,6 @@ body main .main-content .container .contact-block form button {
   body main .chat {
     right: 20px;
     top: 90%;
-  }
-  body main .main-nav {
-    margin-top: 24px;
   }
   body main .main-content {
     margin: 0;
@@ -977,4 +973,94 @@ body main .main-content .container .contact-block form button {
   .page-404-scroll .page-404 section p {
     font-size: 18px;
   }
+}
+main {
+  background: #f2f2f5;
+}
+main h1 {
+  margin-top: 32px;
+}
+main .about-delivery {
+  margin-top: 24px;
+  padding: 32px 40px;
+  border-radius: 8px;
+  background: #fff;
+  max-width: 60%;
+  min-width: 720px;
+  position: relative;
+}
+main .about-delivery h3 {
+  margin-bottom: 24px;
+}
+main .about-delivery .hint-circle {
+  position: absolute;
+  right: -8px;
+  top: 136px;
+  cursor: pointer;
+}
+main .about-delivery .hint-circle.hiden {
+  visibility: hidden;
+}
+main .about-delivery .about-delivery-contetn-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+main .about-delivery .about-delivery-contetn-wrap .route h5 {
+  margin-bottom: 8px;
+}
+main .about-delivery .about-delivery-contetn-wrap .route .rout-content-wrap {
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid var(--Stroke-CDCED7, #cdced7);
+  position: relative;
+}
+main .about-delivery .about-delivery-contetn-wrap .route .rout-content-wrap .tips {
+  position: absolute;
+  right: -480px;
+}
+main .about-delivery .about-delivery-contetn-wrap .route .rout-content-wrap .rout-wrap {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  padding: 14px 16px;
+}
+main .about-delivery .about-delivery-contetn-wrap .route .rout-content-wrap .rout-wrap.active {
+  background: #e6f3ff;
+}
+main .about-delivery .about-delivery-contetn-wrap .route .rout-content-wrap .rout-wrap p {
+  color: var(--Accesible-text-Main-1E1F24, #1e1f24);
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+main .about-delivery .about-delivery-contetn-wrap .content-wrap {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+}
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .from-where,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .how-to-convey,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .whereabout,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .from-where .drop-for-delivery,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-for-delivery,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .whereabout .drop-for-delivery,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-for-delivery {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  border: 1px solid var(--Stroke-CDCED7, #cdced7);
+  height: 48px;
+  padding: 12px 16px;
 }

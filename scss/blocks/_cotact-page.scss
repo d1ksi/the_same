@@ -11,7 +11,6 @@ body {
     }
     .main-nav {
       width: 100%;
-      margin-top: 24px;
       p {
         color: var(--Accesible-text-Main-1E1F24, #1e1f24);
         font-family: "Open Sans";
@@ -212,9 +211,6 @@ body {
       .chat {
         right: 20px;
         top: 90%;
-      }
-      .main-nav {
-        margin-top: 24px;
       }
       .main-content {
         margin: 0;

@@ -28,3 +28,45 @@ document.querySelector('.header-burger').addEventListener('click', () => {
         selectForMobile.classList.remove('active');
     }
 });
+
+
+
+const routeBlocks = document.querySelectorAll('.rout-wrap');
+const tipsBlocks = document.querySelectorAll('.tips');
+routeBlocks.forEach(block => {
+  block.addEventListener('click', () => {
+    routeBlocks.forEach(b => {
+      b.classList.remove('active');
+      b.querySelector('.check-box').classList.remove('active');
+    });
+    tipsBlocks.forEach(t => {
+      t.classList.remove('active');
+    });
+    block.classList.add('active');
+    block.querySelector('.check-box').classList.add('active');
+    const relatedTipsClass = block.classList.contains('czech-republic-ukraine')
+      ? 'czech-republic-ukraine'
+      : 'ukraine-czech-republic';
+    const relatedTips = document.querySelector(`.tips.${relatedTipsClass}`);
+    if (relatedTips) {
+      relatedTips.classList.add('active');
+      const svgElement = document.querySelector('svg.hint-circle');
+      if (svgElement) {
+        svgElement.classList.remove('hiden');
+      }
+    }
+  });
+});
+
+document.querySelectorAll('.accessibly').forEach(button => {
+  button.addEventListener('click', () => {
+    const tipsBlock = button.closest('.tips');
+    if (tipsBlock) {
+      tipsBlock.classList.remove('active');
+      const svgElement = document.querySelector('svg.hint-circle');
+      if (svgElement) {
+        svgElement.classList.add('hiden');
+      }
+    }
+  });
+});
