@@ -70,3 +70,50 @@ document.querySelectorAll('.accessibly').forEach(button => {
     }
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const dropForDeliveryElements = document.querySelectorAll(".drop-for-delivery"); 
+  dropForDeliveryElements.forEach(function(dropForDelivery) {
+      const dropChoice = dropForDelivery.nextElementSibling;
+      const hintElement = dropForDelivery.querySelector(".hint");
+      const selectedElement = dropForDelivery.querySelector(".selected");
+      if (!dropChoice) {
+          console.error("Не найден элемент .drop-choice для этого .drop-for-delivery");
+          return;
+      }      
+      dropForDelivery.addEventListener("click", function() {
+          dropForDelivery.classList.toggle("active");
+          dropChoice.classList.toggle("active");
+      });
+      dropChoice.addEventListener("click", function(event) {
+          const cityElement = event.target.closest("div");
+          if (cityElement) {
+              const cityName = cityElement.querySelector("p").textContent;
+              selectedElement.textContent = cityName;
+              if (selectedElement.textContent.trim() !== "") {
+                  hintElement.classList.add("active");
+              } else {
+                  hintElement.classList.remove("active");
+              }
+              dropChoice.classList.remove("active");
+              dropForDelivery.classList.remove("active");
+          }
+      });
+  });
+});
+
+
+
+document.querySelectorAll('.detail-wrap').forEach((wrap) => {
+  wrap.addEventListener('click', () => {
+    document.querySelectorAll('.check-box').forEach((checkBox) => {
+      checkBox.classList.remove('active');
+    });
+    const checkBox = wrap.querySelector('.check-box');
+    if (checkBox) {
+      checkBox.classList.add('active');
+    }
+  });
+});
+

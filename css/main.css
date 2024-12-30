@@ -1005,6 +1005,8 @@ main .about-delivery .about-delivery-contetn-wrap {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  border-radius: 8px;
+  background: #fff;
 }
 main .about-delivery .about-delivery-contetn-wrap .route h5 {
   margin-bottom: 8px;
@@ -1063,4 +1065,131 @@ main .about-delivery .about-delivery-contetn-wrap .content-wrap .branch-of-the-n
   border: 1px solid var(--Stroke-CDCED7, #cdced7);
   height: 48px;
   padding: 12px 16px;
+}
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .from-where .drop-for-delivery.active,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-for-delivery.active,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .whereabout .drop-for-delivery.active,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-for-delivery.active {
+  position: relative;
+  border: 1px solid var(--Action-Brand-Dark-Blue-0B449D, #0b449d);
+}
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .from-where .drop-for-delivery.active .hint-and-selected .hint,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-for-delivery.active .hint-and-selected .hint,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .whereabout .drop-for-delivery.active .hint-and-selected .hint,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-for-delivery.active .hint-and-selected .hint {
+  color: var(--Action-Brand-Dark-Blue-0B449D, #0b449d);
+}
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  position: absolute;
+  width: 100%;
+  max-width: 312px;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: 250px;
+  bottom: -120px;
+  background: #fff;
+  padding: 18px 16px;
+  border-radius: 0px 0px 4px 4px;
+  background: var(--Background-White-FFFFFF, #fff);
+  box-shadow: 0px 2px 10px 0px rgba(36, 36, 34, 0.25);
+  overflow: auto;
+}
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice::-webkit-scrollbar,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice::-webkit-scrollbar,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice::-webkit-scrollbar,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice::-webkit-scrollbar {
+  width: 8px;
+  height: 25.744px;
+}
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice::-webkit-scrollbar-thumb,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice::-webkit-scrollbar-thumb,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice::-webkit-scrollbar-thumb,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice::-webkit-scrollbar-thumb {
+  background-color: #cdced7;
+  border-radius: 4px;
+  border: 1px solid #cdced7;
+}
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice::-webkit-scrollbar-track,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice::-webkit-scrollbar-track,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice::-webkit-scrollbar-track,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice::-webkit-scrollbar-track {
+  background-color: #f0f0f3;
+  border-radius: 4px;
+  border: 1px solid #cdced7;
+}
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice.active,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice.active,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice.active,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice.active {
+  display: flex;
+}
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice div,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice div,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice div,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice div {
+  cursor: pointer;
+}
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice div p,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice div span,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice div p,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice div span,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice div p,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice div span,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice div p,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice div span {
+  color: var(--Accesible-text-Main-1E1F24, #1e1f24);
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice div span,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice div span,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice div span,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice div span {
+  color: var(--Accesible-text-Additional-62636C, #62636c);
+  font-size: 12px;
+}
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice #popular,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice #popular,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice #popular,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice #popular {
+  font-size: 16px;
+  color: var(--Accesible-text-Additional-62636C, #62636c);
+}
+main .parcel-details {
+  padding: 32px 40px;
+  border-radius: 8px;
+  background: #fff;
+  max-width: 60%;
+  min-width: 720px;
+  margin-top: 8px;
+}
+main .parcel-details .detail {
+  margin-top: 24px;
+  margin-bottom: 42px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+main .parcel-details .detail .detail-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+main .parcel-details .detail .detail-wrap p {
+  color: var(--Accesible-text-Main-1E1F24, #1e1f24);
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }

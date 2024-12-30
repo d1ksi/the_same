@@ -109,6 +109,7 @@ input {
 //defolt style
 main {
   padding-top: 24px !important;
+  padding-bottom: 80px !important;
 }
 .main-nav {
   width: 100%;
@@ -153,10 +154,27 @@ h5,
   font-weight: 400;
   line-height: normal;
 }
+.hint {
+  &.active {
+    color: var(--Action-Brand-Dark-Blue-0B449D, #0b449d);
+    font-size: 12px;
+  }
+}
+.selected {
+  color: var(--Accesible-text-Main-1E1F24, #1e1f24);
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 .new-post {
   color: #242422;
 }
-button {
+button,
+.accessibly {
+  cursor: pointer;
+  border: none;
   border-radius: 26.5px;
   background: linear-gradient(0deg, #1a64db 0%, #1a64db 100%),
     linear-gradient(0deg, #0b449d 0%, #0b449d 100%),
@@ -219,22 +237,6 @@ button {
         font-weight: 400;
         line-height: 140%;
       }
-    }
-    .accessibly {
-      border: none;
-      background: none;
-      cursor: pointer;
-      color: var(--Action-Brand-Dark-Blue-0B449D, #0b449d);
-      text-align: center;
-      // font-family: Ermilov;
-      font-size: 15px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      letter-spacing: 0.3px;
-      text-transform: uppercase;
-      padding: 0;
-      height: fit-content;
     }
   }
 }
