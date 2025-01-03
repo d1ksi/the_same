@@ -88,7 +88,7 @@
       <h1 class="title">Розрахуйте вартість доставки</h1>
       <section class="about-delivery">
          <h3>Розкажіть про доставку</h3>
-         <svg class="hint-circle" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+         <svg class="hint-circle accept" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
             <circle cx="8" cy="8" r="8" fill="#F3C914"/>
          </svg>
          <div class="about-delivery-contetn-wrap">
@@ -134,6 +134,13 @@
                   </div>
                   <div class="drop-choice">
                      <span id="popular">Популярні</span>
+                     <div class="search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                           <circle cx="11" cy="11" r="6" stroke="#2E1721" stroke-width="1.2"/>
+                           <path d="M20 20L17 17" stroke="#2E1721" stroke-width="1.2" stroke-linecap="round"/>
+                         </svg>
+                        <input type="text">
+                     </div>
                      <div>
                         <p>місто Київ</p>
                         <span>Київська область, Україна</span>
@@ -246,6 +253,13 @@
                      </svg>
                   </div>
                   <div class="drop-choice">
+                     <div class="search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                           <circle cx="11" cy="11" r="6" stroke="#2E1721" stroke-width="1.2"/>
+                           <path d="M20 20L17 17" stroke="#2E1721" stroke-width="1.2" stroke-linecap="round"/>
+                         </svg>
+                        <input type="text">
+                     </div>
                      <p>1</p>
                      <p>2</p>
                      <p>3</p>
@@ -256,10 +270,21 @@
          </div>
       </section>
       <section class="parcel-details">
+         <svg class="hint-circle parcel-hint-circle" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <circle cx="8" cy="8" r="8" fill="#F3C914"/>
+         </svg>
+         <div class="tips parcel-tips">
+            <div class="content">
+               <div class="content-text">
+                  <p>Зверніть увагу, що тип і розмір впливає на кінцеву вартість доставки. Якщо ви випадково помилитесь в розмірах, то при відправці посилки працівник доставки зазначить наявний більний/менший розмір або вагу, то відповідно фінальна вартість доставки отримувача збільшиться/зменшиться на цю одиницю відповидно.</p>
+               </div>
+               <button class="accessibly parcel-btn">Зрозуміло</button>
+            </div>
+         </div>
          <h3>Деталі посилки</h3>
          <div class="detail">
             <h5>Тип відправлення та розмір</h5>
-            <div id="document" class="detail-wrap">
+            <div class="detail-wrap with-information">
                <div class="check-box"></div>
                <p>Документ (папка формату А4, лист)</p>
             </div>
@@ -287,10 +312,116 @@
                <div class="check-box"></div>
                <p>Посилка XXL (розмір до 70*65 см)</p>
             </div>
-            <div id="combi" class="detail-wrap">
+            <div class="detail-wrap with-information with-input">
                <div class="check-box"></div>
                <p>Посилки з продуктами харчування, ліками, комерційними партіями</p>
             </div>
+            <input class="with-information-input" type="text" placeholder="Вага посилки в кг">
+         </div>
+         <div class="whats-package">
+            <h5>Що в посилці?</h5>
+            <div class="whats-package-wrap-content">
+               <div class="whats-package-wrap">
+                  <div class="whats-package-check-box">
+                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 72 72"
+                     style="fill:#FFFFFF;">
+                     <path d="M57.658,12.643c1.854,1.201,2.384,3.678,1.183,5.532l-25.915,40c-0.682,1.051-1.815,1.723-3.064,1.814	C29.764,59.997,29.665,60,29.568,60c-1.146,0-2.241-0.491-3.003-1.358L13.514,43.807c-1.459-1.659-1.298-4.186,0.36-5.646	c1.662-1.46,4.188-1.296,5.646,0.361l9.563,10.87l23.043-35.567C53.329,11.971,55.806,11.442,57.658,12.643z"></path>
+                     </svg>
+                  </div>
+                  <p>Особисті б/у речі</p>
+               </div>
+               <div class="whats-package-wrap">
+                  <div class="whats-package-check-box">
+                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 72 72"
+                     style="fill:#FFFFFF;">
+                     <path d="M57.658,12.643c1.854,1.201,2.384,3.678,1.183,5.532l-25.915,40c-0.682,1.051-1.815,1.723-3.064,1.814	C29.764,59.997,29.665,60,29.568,60c-1.146,0-2.241-0.491-3.003-1.358L13.514,43.807c-1.459-1.659-1.298-4.186,0.36-5.646	c1.662-1.46,4.188-1.296,5.646,0.361l9.563,10.87l23.043-35.567C53.329,11.971,55.806,11.442,57.658,12.643z"></path>
+                     </svg>
+                  </div>
+                  <p>Продукти харчування</p>
+               </div>
+               <div class="whats-package-wrap">
+                  <div class="whats-package-check-box">
+                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 72 72"
+                     style="fill:#FFFFFF;">
+                     <path d="M57.658,12.643c1.854,1.201,2.384,3.678,1.183,5.532l-25.915,40c-0.682,1.051-1.815,1.723-3.064,1.814	C29.764,59.997,29.665,60,29.568,60c-1.146,0-2.241-0.491-3.003-1.358L13.514,43.807c-1.459-1.659-1.298-4.186,0.36-5.646	c1.662-1.46,4.188-1.296,5.646,0.361l9.563,10.87l23.043-35.567C53.329,11.971,55.806,11.442,57.658,12.643z"></path>
+                     </svg>
+                  </div>
+                  <p>Алкоголь</p>
+               </div>
+               <div class="whats-package-wrap">
+                  <div class="whats-package-check-box">
+                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 72 72"
+                     style="fill:#FFFFFF;">
+                     <path d="M57.658,12.643c1.854,1.201,2.384,3.678,1.183,5.532l-25.915,40c-0.682,1.051-1.815,1.723-3.064,1.814	C29.764,59.997,29.665,60,29.568,60c-1.146,0-2.241-0.491-3.003-1.358L13.514,43.807c-1.459-1.659-1.298-4.186,0.36-5.646	c1.662-1.46,4.188-1.296,5.646,0.361l9.563,10.87l23.043-35.567C53.329,11.971,55.806,11.442,57.658,12.643z"></path>
+                     </svg>
+                  </div>
+                  <p>Ліки</p>
+               </div>
+               <div class="whats-package-wrap">
+                  <div class="whats-package-check-box">
+                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 72 72"
+                     style="fill:#FFFFFF;">
+                     <path d="M57.658,12.643c1.854,1.201,2.384,3.678,1.183,5.532l-25.915,40c-0.682,1.051-1.815,1.723-3.064,1.814	C29.764,59.997,29.665,60,29.568,60c-1.146,0-2.241-0.491-3.003-1.358L13.514,43.807c-1.459-1.659-1.298-4.186,0.36-5.646	c1.662-1.46,4.188-1.296,5.646,0.361l9.563,10.87l23.043-35.567C53.329,11.971,55.806,11.442,57.658,12.643z"></path>
+                     </svg>
+                  </div>
+                  <p>Будівельні матеріали</p>
+               </div>
+               <div class="whats-package-wrap">
+                  <div class="whats-package-check-box">
+                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 72 72"
+                     style="fill:#FFFFFF;">
+                     <path d="M57.658,12.643c1.854,1.201,2.384,3.678,1.183,5.532l-25.915,40c-0.682,1.051-1.815,1.723-3.064,1.814	C29.764,59.997,29.665,60,29.568,60c-1.146,0-2.241-0.491-3.003-1.358L13.514,43.807c-1.459-1.659-1.298-4.186,0.36-5.646	c1.662-1.46,4.188-1.296,5.646,0.361l9.563,10.87l23.043-35.567C53.329,11.971,55.806,11.442,57.658,12.643z"></path>
+                     </svg>
+                  </div>
+                  <p>Замовлення з інтернет магазину</p>
+               </div>
+               <div class="whats-package-wrap">
+                  <div class="whats-package-check-box">
+                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 72 72"
+                     style="fill:#FFFFFF;">
+                     <path d="M57.658,12.643c1.854,1.201,2.384,3.678,1.183,5.532l-25.915,40c-0.682,1.051-1.815,1.723-3.064,1.814	C29.764,59.997,29.665,60,29.568,60c-1.146,0-2.241-0.491-3.003-1.358L13.514,43.807c-1.459-1.659-1.298-4.186,0.36-5.646	c1.662-1.46,4.188-1.296,5.646,0.361l9.563,10.87l23.043-35.567C53.329,11.971,55.806,11.442,57.658,12.643z"></path>
+                     </svg>
+                  </div>
+                  <p>Автокомплектуючі</p>
+               </div>
+               <div class="whats-package-wrap">
+                  <div class="whats-package-check-box">
+                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 72 72"
+                     style="fill:#FFFFFF;">
+                     <path d="M57.658,12.643c1.854,1.201,2.384,3.678,1.183,5.532l-25.915,40c-0.682,1.051-1.815,1.723-3.064,1.814	C29.764,59.997,29.665,60,29.568,60c-1.146,0-2.241-0.491-3.003-1.358L13.514,43.807c-1.459-1.659-1.298-4.186,0.36-5.646	c1.662-1.46,4.188-1.296,5.646,0.361l9.563,10.87l23.043-35.567C53.329,11.971,55.806,11.442,57.658,12.643z"></path>
+                     </svg>
+                  </div>
+                  <p>Авто товари</p>
+               </div>
+               <div class="whats-package-wrap">
+                  <div class="whats-package-check-box">
+                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 72 72"
+                     style="fill:#FFFFFF;">
+                     <path d="M57.658,12.643c1.854,1.201,2.384,3.678,1.183,5.532l-25.915,40c-0.682,1.051-1.815,1.723-3.064,1.814	C29.764,59.997,29.665,60,29.568,60c-1.146,0-2.241-0.491-3.003-1.358L13.514,43.807c-1.459-1.659-1.298-4.186,0.36-5.646	c1.662-1.46,4.188-1.296,5.646,0.361l9.563,10.87l23.043-35.567C53.329,11.971,55.806,11.442,57.658,12.643z"></path>
+                     </svg>
+                  </div>
+                  <p>Шини</p>
+               </div>
+               <div class="whats-package-wrap">
+                  <div class="whats-package-check-box">
+                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 72 72"
+                     style="fill:#FFFFFF;">
+                     <path d="M57.658,12.643c1.854,1.201,2.384,3.678,1.183,5.532l-25.915,40c-0.682,1.051-1.815,1.723-3.064,1.814	C29.764,59.997,29.665,60,29.568,60c-1.146,0-2.241-0.491-3.003-1.358L13.514,43.807c-1.459-1.659-1.298-4.186,0.36-5.646	c1.662-1.46,4.188-1.296,5.646,0.361l9.563,10.87l23.043-35.567C53.329,11.971,55.806,11.442,57.658,12.643z"></path>
+                     </svg>
+                  </div>
+                  <p>Меблі</p>
+               </div>
+               <div class="whats-package-wrap">
+                  <div class="whats-package-check-box">
+                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 72 72"
+                     style="fill:#FFFFFF;">
+                     <path d="M57.658,12.643c1.854,1.201,2.384,3.678,1.183,5.532l-25.915,40c-0.682,1.051-1.815,1.723-3.064,1.814	C29.764,59.997,29.665,60,29.568,60c-1.146,0-2.241-0.491-3.003-1.358L13.514,43.807c-1.459-1.659-1.298-4.186,0.36-5.646	c1.662-1.46,4.188-1.296,5.646,0.361l9.563,10.87l23.043-35.567C53.329,11.971,55.806,11.442,57.658,12.643z"></path>
+                     </svg>
+                  </div>
+                  <p>Косметика</p>
+               </div>
+            </div>
+            <input type="text" placeholder="Вписати вручну для нетипових відправок">
          </div>
          <button>Розрахувати вартість доставки</button>
       </section>

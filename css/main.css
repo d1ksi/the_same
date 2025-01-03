@@ -1083,6 +1083,7 @@ main .about-delivery .about-delivery-contetn-wrap .content-wrap .from-where .dro
 main .about-delivery .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice,
 main .about-delivery .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice,
 main .about-delivery .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice {
+  z-index: 10;
   display: none;
   flex-direction: column;
   gap: 16px;
@@ -1171,6 +1172,21 @@ main .parcel-details {
   max-width: 60%;
   min-width: 720px;
   margin-top: 8px;
+  position: relative;
+}
+main .parcel-details .hint-circle {
+  position: absolute;
+  right: -8px;
+  top: 87px;
+}
+main .parcel-details .hint-circle.hidden {
+  visibility: hidden;
+}
+main .parcel-details .parcel-tips {
+  display: block;
+  position: absolute;
+  top: 75px;
+  right: -440px;
 }
 main .parcel-details .detail {
   margin-top: 24px;
@@ -1192,4 +1208,87 @@ main .parcel-details .detail .detail-wrap p {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+main .parcel-details .detail .with-information-input {
+  display: none;
+  border-radius: 4px;
+  border: 1px solid var(--Stroke-CDCED7, #cdced7);
+  height: 48px;
+  padding: 4px 16px;
+  align-items: center;
+  align-self: stretch;
+  color: var(--Accesible-text-Additional-62636C, #62636c);
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 300px;
+  margin-left: 40px;
+}
+main .parcel-details .detail .with-information-input.active {
+  display: flex;
+}
+main .parcel-details .whats-package h5 {
+  margin-bottom: 16px;
+}
+main .parcel-details .whats-package .whats-package-wrap-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+main .parcel-details .whats-package .whats-package-wrap-content .whats-package-wrap {
+  cursor: pointer;
+  border-radius: 24px;
+  background: var(--Shades-White, #fff);
+  box-shadow: 0px -1px 6px 0px rgba(0, 0, 0, 0.05), 0px 2px 4px -2px rgba(16, 24, 40, 0.03), 0px 6px 8px -4px rgba(16, 24, 40, 0.08);
+  display: flex;
+  padding: 12px 16px 12px 12px;
+  align-items: center;
+  gap: 8px;
+}
+main .parcel-details .whats-package .whats-package-wrap-content .whats-package-wrap .whats-package-check-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #8b8d98;
+  border-radius: 4px;
+  width: 22px;
+  height: 22px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+main .parcel-details .whats-package .whats-package-wrap-content .whats-package-wrap .whats-package-check-box.active {
+  border: 2px solid #1a64db;
+  background-color: #1a64db;
+}
+main .parcel-details .whats-package .whats-package-wrap-content .whats-package-wrap p {
+  color: var(--Accesible-text-Main-1E1F24, #1e1f24);
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+main .parcel-details .whats-package input {
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  border: 1px solid var(--Stroke-CDCED7, #cdced7);
+  display: flex;
+  height: 48px;
+  padding: 12px 16px;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+  color: var(--Accesible-text-Additional-62636C, #62636c);
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 40px;
 }

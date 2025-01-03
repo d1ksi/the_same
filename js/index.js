@@ -104,6 +104,78 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const routeBlocks = document.querySelectorAll('.rout-wrap');
+  const tipsBlocks = document.querySelectorAll('.tips');
+  const accessiblyButtons = document.querySelectorAll('.accessibly');
+  const parcelButton = document.querySelector('.parcel-btn');
+  const parcelTipsBlock = document.querySelector('.parcel-tips');
+  const parcelHintCircle = document.querySelector('.parcel-hint-circle');
+  routeBlocks.forEach(block => {
+    block.addEventListener('click', () => {
+      routeBlocks.forEach(b => {
+        b.classList.remove('active');
+        b.querySelector('.check-box').classList.remove('active');
+        const svgElement = b.querySelector('svg.hint-circle');
+        if (svgElement) {
+          svgElement.classList.add('hiden');
+        }
+      });
+      tipsBlocks.forEach(t => {
+        t.classList.remove('active');
+      });
+      block.classList.add('active');
+      block.querySelector('.check-box').classList.add('active');
+      const relatedTipsClass = block.classList.contains('czech-republic-ukraine')
+        ? 'czech-republic-ukraine'
+        : 'ukraine-czech-republic';
+      const relatedTips = document.querySelector(`.tips.${relatedTipsClass}`);
+      if (relatedTips) {
+        relatedTips.classList.add('active');
+        const svgElement = block.querySelector('svg.hint-circle'); // Берем SVG только из текущего блока
+        if (svgElement) {
+          svgElement.classList.remove('hiden');
+        }
+      }
+    });
+  });
+  accessiblyButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const tipsBlock = button.closest('.tips');
+      if (tipsBlock) {
+        tipsBlock.classList.remove('active');
+        const routeBlock = tipsBlock.closest('.rout-wrap');
+        const svgElement = routeBlock?.querySelector('svg.hint-circle'); // Работаем с SVG внутри текущего блока
+
+        if (svgElement) {
+          svgElement.classList.add('hiden');
+          if (routeBlocks[0] === routeBlock) {
+            svgElement.classList.add('accept');
+            console.log('Класс accept добавлен к SVG первого блока');
+          } else {
+            console.log('Класс accept не добавлен, это не первый блок');
+          }
+        } else {
+          console.log('SVG элемент не найден для этого блока');
+        }
+      } else {
+        console.log('Tips блок не найден для кнопки');
+      }
+    });
+  });
+  if (parcelButton && parcelTipsBlock && parcelHintCircle) {
+    parcelButton.addEventListener('click', () => {
+      parcelTipsBlock.style.display = 'none';
+      parcelHintCircle.classList.add('hidden');
+    });
+  } else {
+    console.error('Не удалось найти один из элементов:', {
+      parcelButton,
+      parcelTipsBlock,
+      parcelHintCircle,
+    });
+  }
+});
 
 document.querySelectorAll('.detail-wrap').forEach((wrap) => {
   wrap.addEventListener('click', () => {
@@ -114,6 +186,26 @@ document.querySelectorAll('.detail-wrap').forEach((wrap) => {
     if (checkBox) {
       checkBox.classList.add('active');
     }
+    if (!wrap.classList.contains('with-information')) {
+      const whatsPackage = document.querySelector('.whats-package');
+      if (whatsPackage) {
+        whatsPackage.classList.add('active');
+      }
+    }
+    if (wrap.classList.contains('with-information') && wrap.classList.contains('with-input')) {
+      const input = document.querySelector('.with-information-input');
+      if (input) {
+        input.classList.toggle('active');
+      }
+    }
   });
 });
 
+
+document.querySelector('.whats-package-wrap-content').addEventListener('click', function (event) {
+  if (event.target.closest('.whats-package-wrap')) {
+    const wrap = event.target.closest('.whats-package-wrap');
+    const checkBox = wrap.querySelector('.whats-package-check-box');
+    checkBox.classList.toggle('active');
+  }
+});
