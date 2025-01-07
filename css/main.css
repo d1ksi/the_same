@@ -1203,6 +1203,29 @@ main .about-delivery .about-delivery-contetn-wrap .content-wrap .whereabout .dro
 main .about-delivery .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-for-delivery.active .hint-and-selected .hint {
   color: var(--Action-Brand-Dark-Blue-0B449D, #0b449d);
 }
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .from-where .whats-package-check-box,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .how-to-convey .whats-package-check-box,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .whereabout .whats-package-check-box,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .whats-package-check-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #8b8d98;
+  border-radius: 4px;
+  width: 22px;
+  height: 22px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .from-where .whats-package-check-box.active,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .how-to-convey .whats-package-check-box.active,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .whereabout .whats-package-check-box.active,
+main .about-delivery .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .whats-package-check-box.active {
+  border: 2px solid #1a64db;
+  background-color: #1a64db;
+}
 main .about-delivery .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice,
 main .about-delivery .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice,
 main .about-delivery .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice,
@@ -1336,9 +1359,17 @@ main .parcel-details .detail .detail-wrap p {
   line-height: normal;
 }
 main .parcel-details .detail .detail-wrap p.checked::before {
-  content: url(../../photo/check-box-tick.svg);
+  border: 2px solid #1a64db;
+}
+main .parcel-details .detail .detail-wrap p.checked::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 24px;
   border: 2px solid #1a64db;
   background: #1a64db;
+  border-radius: 50%;
 }
 main .parcel-details .detail .detail-wrap p::before {
   content: "";

@@ -217,8 +217,6 @@ paragraphs.forEach(p => {
    });
 });
 
-
-
 document.getElementById('delivery-calculation').addEventListener('click', function() {
   var activeRoute = document.querySelector('.rout-wrap.active p').textContent;
   document.querySelector('.czech-republic-ukraine-box').classList.remove('active');
