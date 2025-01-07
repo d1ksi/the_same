@@ -216,3 +216,30 @@ paragraphs.forEach(p => {
       this.classList.toggle('checked');
    });
 });
+
+
+
+document.getElementById('delivery-calculation').addEventListener('click', function() {
+  var activeRoute = document.querySelector('.rout-wrap.active p').textContent;
+  document.querySelector('.czech-republic-ukraine-box').classList.remove('active');
+  document.querySelector('.ukraine-czech-republic-box').classList.remove('active');
+  document.querySelector('main').classList.remove('active');
+  if (activeRoute === 'Чехія-Україна') {
+      document.querySelector('.czech-republic-ukraine-box').classList.add('active');
+  } else if (activeRoute === 'Україна-Чехія') {
+      document.querySelector('.ukraine-czech-republic-box').classList.add('active');
+  }
+  document.querySelector('main').classList.add('active');
+});
+document.querySelectorAll('.close').forEach(function(closeButton) {
+  closeButton.addEventListener('click', function() {
+      var box = closeButton.closest('.czech-republic-ukraine-box, .ukraine-czech-republic-box');
+      if (box) {
+          box.classList.remove('active');
+          if (!document.querySelector('.czech-republic-ukraine-box.active') && 
+              !document.querySelector('.ukraine-czech-republic-box.active')) {
+              document.querySelector('main').classList.remove('active');
+          }
+      }
+  });
+});
