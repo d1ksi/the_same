@@ -113,16 +113,18 @@ main {
 }
 .main-nav {
   width: 100%;
-  p {
+  a,
+  span {
+    text-decoration: none;
     color: var(--Accesible-text-Main-1E1F24, #1e1f24);
     font-family: "Open Sans";
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    span {
-      color: var(--Accesible-text-Additional-62636C, #62636c);
-    }
+  }
+  span {
+    color: var(--Accesible-text-Additional-62636C, #62636c);
   }
 }
 

@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const relatedTips = document.querySelector(`.tips.${relatedTipsClass}`);
       if (relatedTips) {
         relatedTips.classList.add('active');
-        const svgElement = block.querySelector('svg.hint-circle'); // Берем SVG только из текущего блока
+        const svgElement = block.querySelector('svg.hint-circle');
         if (svgElement) {
           svgElement.classList.remove('hiden');
         }
@@ -228,6 +228,7 @@ document.getElementById('delivery-calculation').addEventListener('click', functi
       document.querySelector('.ukraine-czech-republic-box').classList.add('active');
   }
   document.querySelector('main').classList.add('active');
+  syncWhatsPackage();
 });
 document.querySelectorAll('.close').forEach(function(closeButton) {
   closeButton.addEventListener('click', function() {
@@ -239,5 +240,49 @@ document.querySelectorAll('.close').forEach(function(closeButton) {
               document.querySelector('main').classList.remove('active');
           }
       }
+      syncWhatsPackage();
+  });
+});
+
+function syncWhatsPackage() {
+  const routeDiv = document.querySelector('.rout-wrap.ukraine-czech-republic');
+  const whatsPackageDiv = document.querySelector('.whats-package');
+  
+  if (routeDiv && whatsPackageDiv) {
+      if (routeDiv.classList.contains('active')) {
+          whatsPackageDiv.classList.add('active');
+      } else {
+          whatsPackageDiv.classList.remove('active');
+      }
+  }
+}
+
+// Добавляем наблюдатель за изменениями класса, если требуется автоматическая синхронизация
+const observer = new MutationObserver(() => syncWhatsPackage());
+const target = document.querySelector('.rout-wrap.ukraine-czech-republic');
+if (target) {
+  observer.observe(target, { attributes: true, attributeFilter: ['class'] });
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Находим все кнопки с классом accessibly
+  const accessiblyButtons = document.querySelectorAll('.accessibly');
+  
+  // Находим все элементы SVG
+  const svgElements = document.querySelectorAll('svg.hint-circle');
+  
+  // Обработчик для кнопок с классом accessibly
+  accessiblyButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const tipsBlock = button.closest('.tips');
+      if (tipsBlock) {
+        tipsBlock.classList.remove('active'); // Закрываем блок
+        const svgElement = tipsBlock.querySelector('svg.hint-circle');
+        if (svgElement) {
+          svgElement.classList.add('hidden'); // Скрываем SVG
+        }
+      }
+    });
   });
 });

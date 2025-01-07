@@ -94,45 +94,50 @@
       </div>
    </header>
    <main>
-      <div class="czech-republic-ukraine-box">
-         <div class="close">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-               <path d="M20 4L4 20M20 20L4 4" stroke="#8B8D98" stroke-width="2" stroke-linecap="round"/>
-             </svg>
+      <section class="czech-republic-ukraine-box popup-overlay">
+         <div class="container popup">
+            <div class="close">
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M20 4L4 20M20 20L4 4" stroke="#8B8D98" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <h6>Готово, ми все порахували!</h6>
+            <p class="price">89$</p>
+            <p class="approximate-delivery-time">Орієнтовані сроки доставки - 4 робочих дня.</p>
+            <p class="help-info">Ви можете одразу оформити посилку для відправки з Чехії, отримати рахунок-фактуру та зафіксувати ціну.</p>
+            <button>Оформити відправлення онлайн</button>
          </div>
-         <h6>Готово, ми все порахували!</h6>
-         <p class="price">89$</p>
-         <p class="approximate-delivery-time">Орієнтовані сроки доставки - 4 робочих дня.</p>
-         <p class="help-info">Ви можете одразу оформити посилку для відправки з Чехії, отримати рахунок-фактуру та зафіксувати ціну.</p>
-         <button>Оформити відправлення онлайн</button>
-      </div>
-      <div class="ukraine-czech-republic-box">
-         <div class="close">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-               <path d="M20 4L4 20M20 20L4 4" stroke="#8B8D98" stroke-width="2" stroke-linecap="round"/>
-             </svg>
+      </section>
+      <section class="ukraine-czech-republic-box popup-overlay">
+         <div class="containet popup">
+            <div class="close">
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M20 4L4 20M20 20L4 4" stroke="#8B8D98" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <h6>Готово, ми все порахували!</h6>
+            <p class="price">89$</p>
+            <p class="approximate-delivery-time">Орієнтовані сроки доставки - 4 робочих дня.</p>
+            <p class="help-info">Заявка для онлайн оформлення посилки</p>
+            <p class="info">Бажаєте оформити посилку для Нової пошти онлайн або отримати консультацію від нашої служби підтримки? Ми допоможемо</p>
+            <label class="text">
+               <input type="text" placeholder="Ім’я">
+               <input type="text" placeholder="Прізвище">
+            </label>
+            <label class="tel">
+               <input type="tel" placeholder="Телефон" pattern="[+]?[0-9]{1,3}?[-.() ]?[0-9]{1,4}[-.() ]?[0-9]{1,4}[-.() ]?[0-9]{1,9}" required>
+           </label>        
+            <button>надіслати заявку</button>
          </div>
-         <h6>Готово, ми все порахували!</h6>
-         <p class="price">89$</p>
-         <p class="approximate-delivery-time">Орієнтовані сроки доставки - 4 робочих дня.</p>
-         <p class="help-info">Заявка для онлайн оформлення посилки</p>
-         <p class="info">Бажаєте оформити посилку для Нової пошти онлайн або отримати консультацію від нашої служби підтримки? Ми допоможемо</p>
-         <label class="text">
-            <input type="text" placeholder="Ім’я">
-            <input type="text" placeholder="Прізвище">
-         </label>
-         <label class="tel">
-            <input type="tel" placeholder="Телефон" pattern="[+]?[0-9]{1,3}?[-.() ]?[0-9]{1,4}[-.() ]?[0-9]{1,4}[-.() ]?[0-9]{1,9}" required>
-        </label>        
-         <button>надіслати заявку</button>
-      </div>
+      </section>
       <section class="main-nav">
-         <p>Головна<span> / Розрахуйте вартість доставки</span></p>
+         <a href="#">Головна</a><span> / Розрахуйте вартість доставки</span>
       </section>
       <h1 class="title">Розрахуйте вартість доставки</h1>
       <section class="about-delivery">
-         <h3>Розкажіть про доставку</h3>
-         <svg class="hint-circle accept" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+         <div class="container">
+            <h3>Розкажіть про доставку</h3>
+         <svg class="hint-circle accept" id="block1-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
             <circle cx="8" cy="8" r="8" fill="#F3C914"/>
          </svg>
          <div class="about-delivery-contetn-wrap">
@@ -141,7 +146,7 @@
                <div class="rout-content-wrap">
                   <div class="rout-wrap czech-republic-ukraine active"><div class="check-box active"></div><p>Чехія-Україна</p></div>
                   <div class="rout-wrap ukraine-czech-republic"><div class="check-box"></div><p>Україна-Чехія</p></div>
-                  <div class="tips czech-republic-ukraine active">
+                  <div class="tips czech-republic-ukraine active" id="block1-svg-czech-republic-ukraine">
                      <div class="content">
                         <div class="content-text">
                            <h4>Відправляючи посилку з Чехії в Україну ви можете:</h4>
@@ -154,7 +159,7 @@
                         <button class="accessibly">Зрозуміло</button>
                      </div>
                   </div>
-                  <div class="tips ukraine-czech-republic">
+                  <div class="tips ukraine-czech-republic" id="block1-svg-ukraine-czech-republic">
                      <div class="content">
                         <div class="content-text">
                            <p>Відправляючи посилку з України в Чехії ви відправляєте її нам Нової поштою. Послуги доставки Нової пошти не входять в загальну сумму вартості доставки</p>
@@ -283,7 +288,6 @@
                         <span>Вінницька область, Україна</span>
                      </div>
                   </div>
-
                </div>
                <div class="branch-of-the-new-post">
                   <h5>Відділення нової пошти</h5>
@@ -312,12 +316,14 @@
                </div>
             </div>
          </div>
+         </div>
       </section>
       <section class="parcel-details">
-         <svg class="hint-circle parcel-hint-circle" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+         <div class="container">
+            <svg class="hint-circle parcel-hint-circle" id="block2-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
             <circle cx="8" cy="8" r="8" fill="#F3C914"/>
          </svg>
-         <div class="tips parcel-tips">
+         <div class="tips parcel-tips" id="tips-block2">
             <div class="content">
                <div class="content-text">
                   <p>Зверніть увагу, що тип і розмір впливає на кінцеву вартість доставки. Якщо ви випадково помилитесь в розмірах, то при відправці посилки працівник доставки зазначить наявний більний/менший розмір або вагу, то відповідно фінальна вартість доставки отримувача збільшиться/зменшиться на цю одиницю відповидно.</p>
@@ -413,6 +419,7 @@
             <input type="text" placeholder="Вписати вручну для нетипових відправок">
          </div>
          <button id="delivery-calculation">Розрахувати вартість доставки</button>
+         </div>
       </section>
    </main>
    <footer>
