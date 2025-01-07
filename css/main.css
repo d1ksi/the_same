@@ -1217,12 +1217,37 @@ main .parcel-details .detail .detail-wrap {
   cursor: pointer;
 }
 main .parcel-details .detail .detail-wrap p {
+  display: flex;
+  align-items: center;
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
   font-family: "Open Sans";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+main .parcel-details .detail .detail-wrap p.checked::before {
+  content: url(../../photo/check-box-tick.svg);
+  border: 2px solid #1a64db;
+  background: #1a64db;
+}
+main .parcel-details .detail .detail-wrap p::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  left: 20px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 4px;
+  border: 2px solid #8b8d98;
+  overflow: hidden;
+  transition: 0.3s ease all;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 main .parcel-details .detail .with-information-input {
   display: none;

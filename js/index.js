@@ -177,29 +177,40 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-document.querySelectorAll('.detail-wrap').forEach((wrap) => {
-  wrap.addEventListener('click', () => {
-    document.querySelectorAll('.check-box').forEach((checkBox) => {
-      checkBox.classList.remove('active');
-    });
-    const checkBox = wrap.querySelector('.check-box');
-    if (checkBox) {
-      checkBox.classList.add('active');
-    }
-    if (!wrap.classList.contains('with-information')) {
-      const whatsPackage = document.querySelector('.whats-package');
-      if (whatsPackage) {
-        whatsPackage.classList.add('active');
-      }
-    }
-    if (wrap.classList.contains('with-information') && wrap.classList.contains('with-input')) {
-      const input = document.querySelector('.with-information-input');
-      if (input) {
-        input.classList.toggle('active');
-      }
-    }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const labels = document.querySelectorAll('.detail-wrap');
+  const inputField = document.querySelector('.with-information-input');
+  labels.forEach(label => {
+      label.addEventListener('click', (e) => {
+          const p = label.querySelector('p');
+          const checkbox = label.querySelector('input');
+          if (p.classList.contains('checked')) {
+              p.classList.remove('checked');
+              checkbox.checked = false;
+              if (label.classList.contains('with-input')) {
+                  inputField.classList.remove('active');
+              }
+          } else {
+              labels.forEach(l => {
+                  l.querySelector('p').classList.remove('checked');
+                  l.querySelector('input').checked = false;
+              });
+              p.classList.add('checked');
+              checkbox.checked = true;
+              if (label.classList.contains('with-input')) {
+                  inputField.classList.add('active');
+              } else {
+                  inputField.classList.remove('active');
+              }
+          }
+          e.preventDefault();
+      });
   });
 });
+
+
+
 
 
 document.querySelector('.whats-package-wrap-content').addEventListener('click', function (event) {
