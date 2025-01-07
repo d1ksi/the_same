@@ -176,19 +176,33 @@ header {
             display: none;
             left: 0px;
             top: 25px;
-            padding: 0px 24px;
+            padding: 10px 10px;
             padding-bottom: 10px;
             background: linear-gradient(0deg, #fff 0%, #fff 100%), #f3c914;
-            p {
-              color: var(--Accesible-text-Main-1E1F24, #1e1f24);
-              // font-family: "Ermilov";
-              font-size: 15px;
-              font-style: normal;
-              font-weight: 700;
-              line-height: normal;
-              letter-spacing: 0.3px;
-              text-transform: uppercase;
+            border-radius: 0px 0px 4px 4px;
+            box-shadow: 0px 2px 10px 0px rgba(36, 36, 34, 0.25);
+            div {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              gap: 5px;
               cursor: pointer;
+              img {
+                width: 17px;
+                height: 12px;
+                object-fit: cover;
+                border: 1px solid #1e1f24;
+              }
+              p {
+                color: var(--Accesible-text-Main-1E1F24, #1e1f24);
+                // font-family: "Ermilov";
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: 0.3px;
+                text-transform: uppercase;
+              }
             }
           }
           .selected-list.active {
