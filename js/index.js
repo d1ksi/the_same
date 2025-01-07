@@ -210,13 +210,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-
-
-document.querySelector('.whats-package-wrap-content').addEventListener('click', function (event) {
-  if (event.target.closest('.whats-package-wrap')) {
-    const wrap = event.target.closest('.whats-package-wrap');
-    const checkBox = wrap.querySelector('.whats-package-check-box');
-    checkBox.classList.toggle('active');
-  }
+const paragraphs = document.querySelectorAll('.whats-package-wrap p');
+paragraphs.forEach(p => {
+   p.addEventListener('click', function () {
+      this.classList.toggle('checked');
+   });
 });

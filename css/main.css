@@ -1287,31 +1287,49 @@ main .parcel-details .whats-package .whats-package-wrap-content .whats-package-w
   padding: 12px 16px 12px 12px;
   align-items: center;
   gap: 8px;
-}
-main .parcel-details .whats-package .whats-package-wrap-content .whats-package-wrap .whats-package-check-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid #8b8d98;
-  border-radius: 4px;
-  width: 22px;
-  height: 22px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-}
-main .parcel-details .whats-package .whats-package-wrap-content .whats-package-wrap .whats-package-check-box.active {
-  border: 2px solid #1a64db;
-  background-color: #1a64db;
+  position: relative;
 }
 main .parcel-details .whats-package .whats-package-wrap-content .whats-package-wrap p {
+  display: flex;
+  margin-left: 16px;
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
   font-family: "Open Sans";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  align-items: center;
+}
+main .parcel-details .whats-package .whats-package-wrap-content .whats-package-wrap p.checked::before {
+  content: url(../../photo/check-box-tick.svg);
+  border: 2px solid #1a64db;
+  background: #1a64db;
+}
+main .parcel-details .whats-package .whats-package-wrap-content .whats-package-wrap p::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  left: 12px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 4px;
+  border: 2px solid #8b8d98;
+  overflow: hidden;
+  transition: 0.3s ease all;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+main .parcel-details .whats-package .whats-package-wrap-content .whats-package-wrap input {
+  height: 0;
+  width: 0;
+  border: none;
+  padding: 0;
+  gap: 0;
+  margin-bottom: 0;
 }
 main .parcel-details .whats-package input {
   width: 100%;
