@@ -300,3 +300,58 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+
+
+
+function updateTipsBasedOnRoute() {
+  document.querySelectorAll('.tips').forEach(block => {
+      block.classList.remove('active');
+      block.style.display = '';
+  });
+  const activeRoute = document.querySelector('.rout-wrap.active');
+  if (activeRoute) {
+      const routeClass = activeRoute.classList.contains('czech-republic-ukraine')
+          ? 'czech-republic-ukraine'
+          : 'ukraine-czech-republic';
+      const tipsBlock = document.querySelector(`.tips.${routeClass}`);
+      if (tipsBlock) {
+          tipsBlock.classList.add('active');
+          tipsBlock.style.display = 'inline-flex';
+      }
+  }
+}
+
+document.querySelector('.svg-title-wrap').addEventListener('click', () => {
+  document.querySelectorAll('.parcel-tips').forEach(block => {
+      block.classList.remove('active');
+      block.style.display = '';
+  });
+  updateTipsBasedOnRoute();
+  const parcelTipsBlock = document.querySelector('.parcel-tips');
+  if (parcelTipsBlock) {
+      parcelTipsBlock.classList.add('active');
+      parcelTipsBlock.style.display = 'inline-flex';
+  }
+});
+document.querySelectorAll('.accessibly').forEach(button => {
+  button.addEventListener('click', () => {
+      const parentBlock = button.closest('.tips');
+      if (parentBlock) {
+          parentBlock.classList.remove('active');
+          parentBlock.style.display = '';
+      }
+  });
+});
+document.querySelectorAll('.rout-wrap').forEach(route => {
+  route.addEventListener('click', () => {
+      document.querySelectorAll('.rout-wrap').forEach(r => {
+          r.classList.remove('active');
+          r.querySelector('.check-box').classList.remove('active');
+      });
+      route.classList.add('active');
+      route.querySelector('.check-box').classList.add('active');
+      updateTipsBasedOnRoute();
+  });
+});

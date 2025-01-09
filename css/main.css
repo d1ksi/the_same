@@ -975,15 +975,46 @@ body main .main-content .container .contact-block form button {
     font-size: 18px;
   }
 }
-main {
+.delivery-main {
   background: #f2f2f5;
   position: relative;
+  overflow-y: hidden;
 }
-main h1 {
+.delivery-main .title-wrap {
   margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 10px;
 }
-main .czech-republic-ukraine-box,
-main .ukraine-czech-republic-box {
+.delivery-main .title-wrap .svg-title-wrap {
+  margin-top: 10px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  background-color: #f3c914;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+@media (max-width: 850px) {
+  .delivery-main .title-wrap .svg-title-wrap {
+    display: flex;
+  }
+}
+@media (max-width: 1100px) {
+  .delivery-main .title-wrap {
+    margin-top: 24px;
+  }
+}
+.delivery-main .czech-republic-ukraine-box,
+.delivery-main .ukraine-czech-republic-box {
   display: none;
   position: fixed;
   left: 0;
@@ -996,12 +1027,12 @@ main .ukraine-czech-republic-box {
   height: 100vh;
   background-color: rgba(242, 242, 245, 0.5);
 }
-main .czech-republic-ukraine-box.active,
-main .ukraine-czech-republic-box.active {
+.delivery-main .czech-republic-ukraine-box.active,
+.delivery-main .ukraine-czech-republic-box.active {
   display: flex;
 }
-main .czech-republic-ukraine-box .container,
-main .ukraine-czech-republic-box .container {
+.delivery-main .czech-republic-ukraine-box .container,
+.delivery-main .ukraine-czech-republic-box .container {
   padding: 0px 32px;
   max-width: 648px;
   display: flex;
@@ -1012,20 +1043,26 @@ main .ukraine-czech-republic-box .container {
   background: #fff;
   box-shadow: 0px 2px 10px 0px rgba(36, 36, 34, 0.25);
 }
-main .czech-republic-ukraine-box .container .close,
-main .ukraine-czech-republic-box .container .close {
+@media (max-width: 850px) {
+  .delivery-main .czech-republic-ukraine-box .container,
+  .delivery-main .ukraine-czech-republic-box .container {
+    max-width: 400px;
+  }
+}
+.delivery-main .czech-republic-ukraine-box .container .close,
+.delivery-main .ukraine-czech-republic-box .container .close {
   width: 100%;
   padding: 24px;
   padding-bottom: 0;
   display: flex;
   justify-content: flex-end;
 }
-main .czech-republic-ukraine-box .container .close svg,
-main .ukraine-czech-republic-box .container .close svg {
+.delivery-main .czech-republic-ukraine-box .container .close svg,
+.delivery-main .ukraine-czech-republic-box .container .close svg {
   cursor: pointer;
 }
-main .czech-republic-ukraine-box .container .price,
-main .ukraine-czech-republic-box .container .price {
+.delivery-main .czech-republic-ukraine-box .container .price,
+.delivery-main .ukraine-czech-republic-box .container .price {
   margin-top: 24px;
   margin-bottom: 8px;
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
@@ -1035,8 +1072,8 @@ main .ukraine-czech-republic-box .container .price {
   font-weight: 700;
   line-height: normal;
 }
-main .czech-republic-ukraine-box .container .approximate-delivery-time,
-main .ukraine-czech-republic-box .container .approximate-delivery-time {
+.delivery-main .czech-republic-ukraine-box .container .approximate-delivery-time,
+.delivery-main .ukraine-czech-republic-box .container .approximate-delivery-time {
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
   text-align: center;
   font-family: "Google Sans";
@@ -1046,8 +1083,8 @@ main .ukraine-czech-republic-box .container .approximate-delivery-time {
   line-height: normal;
   margin-bottom: 40px;
 }
-main .czech-republic-ukraine-box .container .help-info,
-main .ukraine-czech-republic-box .container .help-info {
+.delivery-main .czech-republic-ukraine-box .container .help-info,
+.delivery-main .ukraine-czech-republic-box .container .help-info {
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
   text-align: center;
   font-family: "Google Sans";
@@ -1057,8 +1094,8 @@ main .ukraine-czech-republic-box .container .help-info {
   line-height: normal;
   margin-bottom: 26px;
 }
-main .czech-republic-ukraine-box .container .info,
-main .ukraine-czech-republic-box .container .info {
+.delivery-main .czech-republic-ukraine-box .container .info,
+.delivery-main .ukraine-czech-republic-box .container .info {
   max-width: 584px;
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
   text-align: center;
@@ -1069,20 +1106,20 @@ main .ukraine-czech-republic-box .container .info {
   line-height: normal;
   margin-bottom: 24px;
 }
-main .czech-republic-ukraine-box .container .text,
-main .czech-republic-ukraine-box .container .tel,
-main .ukraine-czech-republic-box .container .text,
-main .ukraine-czech-republic-box .container .tel {
+.delivery-main .czech-republic-ukraine-box .container .text,
+.delivery-main .czech-republic-ukraine-box .container .tel,
+.delivery-main .ukraine-czech-republic-box .container .text,
+.delivery-main .ukraine-czech-republic-box .container .tel {
   width: 100%;
   display: flex;
   justify-content: space-between;
   gap: 16px;
   margin-bottom: 16px;
 }
-main .czech-republic-ukraine-box .container .text input,
-main .czech-republic-ukraine-box .container .tel input,
-main .ukraine-czech-republic-box .container .text input,
-main .ukraine-czech-republic-box .container .tel input {
+.delivery-main .czech-republic-ukraine-box .container .text input,
+.delivery-main .czech-republic-ukraine-box .container .tel input,
+.delivery-main .ukraine-czech-republic-box .container .text input,
+.delivery-main .ukraine-czech-republic-box .container .tel input {
   width: 100%;
   height: 48px;
   border-radius: 4px;
@@ -1095,13 +1132,13 @@ main .ukraine-czech-republic-box .container .tel input {
   font-weight: 400;
   line-height: normal;
 }
-main .czech-republic-ukraine-box .container button,
-main .ukraine-czech-republic-box .container button {
+.delivery-main .czech-republic-ukraine-box .container button,
+.delivery-main .ukraine-czech-republic-box .container button {
   max-width: 355px;
   width: 100%;
   margin-bottom: 49px;
 }
-main .about-delivery {
+.delivery-main .about-delivery {
   margin-top: 24px;
   padding: 32px 40px;
   border-radius: 8px;
@@ -1110,46 +1147,94 @@ main .about-delivery {
   min-width: 720px;
   position: relative;
 }
-main .about-delivery .container h3 {
+@media (max-width: 1300px) {
+  .delivery-main .about-delivery {
+    min-width: 620px;
+    padding: 32px 20px;
+  }
+}
+@media (max-width: 1100px) {
+  .delivery-main .about-delivery {
+    min-width: 520px;
+  }
+}
+@media (max-width: 850px) {
+  .delivery-main .about-delivery {
+    max-width: calc(100% + 32px);
+    min-width: calc(100% + 32px);
+    margin: 0px -16px;
+    margin-bottom: 8px;
+    margin-top: 24px;
+  }
+}
+.delivery-main .about-delivery .container h3 {
   margin-bottom: 24px;
 }
-main .about-delivery .container .hint-circle {
+.delivery-main .about-delivery .container .hint-circle {
   position: absolute;
   right: -8px;
   top: 136px;
   cursor: pointer;
 }
-main .about-delivery .container .about-delivery-contetn-wrap {
+@media (max-width: 850px) {
+  .delivery-main .about-delivery .container .hint-circle {
+    display: none;
+  }
+}
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap {
   display: flex;
   flex-direction: column;
   gap: 24px;
   border-radius: 8px;
   background: #fff;
 }
-main .about-delivery .container .about-delivery-contetn-wrap .route h5 {
+@media (max-width: 1300px) {
+  .delivery-main .about-delivery .container .about-delivery-contetn-wrap {
+    gap: 16px;
+  }
+}
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .route h5 {
   margin-bottom: 8px;
 }
-main .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap {
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap {
   display: flex;
   border-radius: 4px;
   border: 1px solid var(--Stroke-CDCED7, #cdced7);
   position: relative;
 }
-main .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap .tips {
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap .tips {
   position: absolute;
-  right: -480px;
+  right: -460px;
 }
-main .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap .rout-wrap {
+@media (max-width: 1300px) {
+  .delivery-main .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap .tips {
+    right: -360px;
+  }
+}
+@media (max-width: 1100px) {
+  .delivery-main .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap .tips {
+    right: -250px;
+  }
+}
+@media (max-width: 850px) {
+  .delivery-main .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap .tips {
+    width: 100%;
+    padding: 14px;
+    left: 0px;
+    top: 0;
+  }
+}
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap .rout-wrap {
   cursor: pointer;
   display: flex;
   align-items: center;
   width: 50%;
   padding: 14px 16px;
 }
-main .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap .rout-wrap.active {
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap .rout-wrap.active {
   background: #e6f3ff;
 }
-main .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap .rout-wrap p {
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap .rout-wrap p {
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
   font-family: "Open Sans";
   font-size: 16px;
@@ -1157,24 +1242,29 @@ main .about-delivery .container .about-delivery-contetn-wrap .route .rout-conten
   font-weight: 400;
   line-height: normal;
 }
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap {
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap {
   display: flex;
   gap: 16px;
   justify-content: space-between;
 }
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post {
+@media (max-width: 1300px) {
+  .delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap {
+    flex-direction: column;
+  }
+}
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post {
   display: flex;
   flex-direction: column;
   gap: 8px;
   width: 100%;
 }
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-for-delivery,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-for-delivery,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-for-delivery,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-for-delivery {
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-for-delivery,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-for-delivery,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-for-delivery,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-for-delivery {
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -1184,23 +1274,23 @@ main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .bran
   height: 48px;
   padding: 12px 16px;
 }
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-for-delivery.active,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-for-delivery.active,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-for-delivery.active,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-for-delivery.active {
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-for-delivery.active,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-for-delivery.active,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-for-delivery.active,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-for-delivery.active {
   position: relative;
   border: 1px solid var(--Action-Brand-Dark-Blue-0B449D, #0b449d);
 }
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-for-delivery.active .hint-and-selected .hint,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-for-delivery.active .hint-and-selected .hint,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-for-delivery.active .hint-and-selected .hint,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-for-delivery.active .hint-and-selected .hint {
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-for-delivery.active .hint-and-selected .hint,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-for-delivery.active .hint-and-selected .hint,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-for-delivery.active .hint-and-selected .hint,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-for-delivery.active .hint-and-selected .hint {
   color: var(--Action-Brand-Dark-Blue-0B449D, #0b449d);
 }
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .whats-package-check-box,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .whats-package-check-box,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .whats-package-check-box,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .whats-package-check-box {
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .whats-package-check-box,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .whats-package-check-box,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .whats-package-check-box,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .whats-package-check-box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1213,17 +1303,17 @@ main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .bran
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
 }
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .whats-package-check-box.active,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .whats-package-check-box.active,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .whats-package-check-box.active,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .whats-package-check-box.active {
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .whats-package-check-box.active,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .whats-package-check-box.active,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .whats-package-check-box.active,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .whats-package-check-box.active {
   border: 2px solid #1a64db;
   background-color: #1a64db;
 }
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice {
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice {
   z-index: 10;
   display: none;
   flex-direction: column;
@@ -1242,49 +1332,49 @@ main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .bran
   box-shadow: 0px 2px 10px 0px rgba(36, 36, 34, 0.25);
   overflow: auto;
 }
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice::-webkit-scrollbar,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice::-webkit-scrollbar,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice::-webkit-scrollbar,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice::-webkit-scrollbar {
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice::-webkit-scrollbar,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice::-webkit-scrollbar,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice::-webkit-scrollbar,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice::-webkit-scrollbar {
   width: 8px;
   height: 25.744px;
 }
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice::-webkit-scrollbar-thumb,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice::-webkit-scrollbar-thumb,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice::-webkit-scrollbar-thumb,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice::-webkit-scrollbar-thumb {
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice::-webkit-scrollbar-thumb,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice::-webkit-scrollbar-thumb,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice::-webkit-scrollbar-thumb,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice::-webkit-scrollbar-thumb {
   background-color: #cdced7;
   border-radius: 4px;
   border: 1px solid #cdced7;
 }
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice::-webkit-scrollbar-track,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice::-webkit-scrollbar-track,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice::-webkit-scrollbar-track,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice::-webkit-scrollbar-track {
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice::-webkit-scrollbar-track,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice::-webkit-scrollbar-track,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice::-webkit-scrollbar-track,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice::-webkit-scrollbar-track {
   background-color: #f0f0f3;
   border-radius: 4px;
   border: 1px solid #cdced7;
 }
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice.active,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice.active,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice.active,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice.active {
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice.active,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice.active,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice.active,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice.active {
   display: flex;
 }
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice div,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice div,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice div,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice div {
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice div,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice div,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice div,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice div {
   cursor: pointer;
 }
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice div p,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice div span,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice div p,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice div span,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice div p,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice div span,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice div p,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice div span {
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice div p,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice div span,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice div p,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice div span,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice div p,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice div span,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice div p,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice div span {
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
   font-family: "Open Sans";
   font-size: 16px;
@@ -1292,21 +1382,21 @@ main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .bran
   font-weight: 400;
   line-height: normal;
 }
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice div span,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice div span,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice div span,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice div span {
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice div span,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice div span,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice div span,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice div span {
   color: var(--Accesible-text-Additional-62636C, #62636c);
   font-size: 12px;
 }
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice #popular,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice #popular,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice #popular,
-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice #popular {
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice #popular,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice #popular,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice #popular,
+.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice #popular {
   font-size: 16px;
   color: var(--Accesible-text-Additional-62636C, #62636c);
 }
-main .parcel-details {
+.delivery-main .parcel-details {
   padding: 32px 40px;
   border-radius: 8px;
   background: #fff;
@@ -1315,31 +1405,76 @@ main .parcel-details {
   margin-top: 8px;
   position: relative;
 }
-main .parcel-details .container .hint-circle {
+@media (max-width: 1300px) {
+  .delivery-main .parcel-details {
+    min-width: 620px;
+    padding: 32px 20px;
+  }
+}
+@media (max-width: 1100px) {
+  .delivery-main .parcel-details {
+    min-width: 520px;
+  }
+}
+@media (max-width: 850px) {
+  .delivery-main .parcel-details {
+    max-width: calc(100% + 32px);
+    min-width: 100%;
+    margin: 0px -16px;
+  }
+}
+.delivery-main .parcel-details .container .hint-circle {
   position: absolute;
   right: -8px;
   top: 87px;
 }
-main .parcel-details .container .parcel-tips {
+@media (max-width: 850px) {
+  .delivery-main .parcel-details .container .hint-circle {
+    display: none;
+  }
+}
+.delivery-main .parcel-details .container .parcel-tips {
   display: block;
   position: absolute;
   top: 75px;
   right: -440px;
 }
-main .parcel-details .container .detail {
+.delivery-main .parcel-details .container .parcel-tips.active {
+  display: block;
+}
+@media (max-width: 1300px) {
+  .delivery-main .parcel-details .container .parcel-tips {
+    right: -340px;
+  }
+}
+@media (max-width: 1100px) {
+  .delivery-main .parcel-details .container .parcel-tips {
+    right: -230px;
+  }
+}
+@media (max-width: 850px) {
+  .delivery-main .parcel-details .container .parcel-tips {
+    width: 100%;
+    display: none;
+    right: 0px;
+    top: 0px;
+    z-index: 4;
+  }
+}
+.delivery-main .parcel-details .container .detail {
   margin-top: 24px;
   margin-bottom: 42px;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-main .parcel-details .container .detail .detail-wrap {
+.delivery-main .parcel-details .container .detail .detail-wrap {
   display: flex;
   align-items: center;
   gap: 8px;
   cursor: pointer;
 }
-main .parcel-details .container .detail .detail-wrap p {
+.delivery-main .parcel-details .container .detail .detail-wrap p {
   display: flex;
   align-items: center;
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
@@ -1348,11 +1483,18 @@ main .parcel-details .container .detail .detail-wrap p {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin: 0;
+  text-wrap: wrap;
 }
-main .parcel-details .container .detail .detail-wrap p.checked::before {
+@media (max-width: 1300px) {
+  .delivery-main .parcel-details .container .detail .detail-wrap p {
+    margin-left: 20px;
+  }
+}
+.delivery-main .parcel-details .container .detail .detail-wrap p.checked::before {
   border: 2px solid #1a64db;
 }
-main .parcel-details .container .detail .detail-wrap p.checked::after {
+.delivery-main .parcel-details .container .detail .detail-wrap p.checked::after {
   content: "";
   position: absolute;
   width: 16px;
@@ -1362,7 +1504,7 @@ main .parcel-details .container .detail .detail-wrap p.checked::after {
   background: #1a64db;
   border-radius: 50%;
 }
-main .parcel-details .container .detail .detail-wrap p::before {
+.delivery-main .parcel-details .container .detail .detail-wrap p::before {
   content: "";
   position: absolute;
   width: 24px;
@@ -1380,7 +1522,7 @@ main .parcel-details .container .detail .detail-wrap p::before {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-main .parcel-details .container .detail .with-information-input {
+.delivery-main .parcel-details .container .detail .with-information-input {
   display: none;
   border-radius: 4px;
   border: 1px solid var(--Stroke-CDCED7, #cdced7);
@@ -1397,25 +1539,25 @@ main .parcel-details .container .detail .with-information-input {
   max-width: 300px;
   margin-left: 40px;
 }
-main .parcel-details .container .detail .with-information-input.active {
+.delivery-main .parcel-details .container .detail .with-information-input.active {
   display: flex;
 }
-main .parcel-details .container .whats-package {
+.delivery-main .parcel-details .container .whats-package {
   display: none;
 }
-main .parcel-details .container .whats-package.active {
+.delivery-main .parcel-details .container .whats-package.active {
   display: block;
 }
-main .parcel-details .container .whats-package h5 {
+.delivery-main .parcel-details .container .whats-package h5 {
   margin-bottom: 16px;
 }
-main .parcel-details .container .whats-package .whats-package-wrap-content {
+.delivery-main .parcel-details .container .whats-package .whats-package-wrap-content {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 32px;
 }
-main .parcel-details .container .whats-package .whats-package-wrap-content .whats-package-wrap {
+.delivery-main .parcel-details .container .whats-package .whats-package-wrap-content .whats-package-wrap {
   cursor: pointer;
   border-radius: 24px;
   background: var(--Shades-White, #fff);
@@ -1426,7 +1568,7 @@ main .parcel-details .container .whats-package .whats-package-wrap-content .what
   gap: 8px;
   position: relative;
 }
-main .parcel-details .container .whats-package .whats-package-wrap-content .whats-package-wrap p {
+.delivery-main .parcel-details .container .whats-package .whats-package-wrap-content .whats-package-wrap p {
   display: flex;
   margin-left: 16px;
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
@@ -1437,12 +1579,12 @@ main .parcel-details .container .whats-package .whats-package-wrap-content .what
   line-height: normal;
   align-items: center;
 }
-main .parcel-details .container .whats-package .whats-package-wrap-content .whats-package-wrap p.checked::before {
+.delivery-main .parcel-details .container .whats-package .whats-package-wrap-content .whats-package-wrap p.checked::before {
   content: url(../../photo/check-box-tick.svg);
   border: 2px solid #1a64db;
   background: #1a64db;
 }
-main .parcel-details .container .whats-package .whats-package-wrap-content .whats-package-wrap p::before {
+.delivery-main .parcel-details .container .whats-package .whats-package-wrap-content .whats-package-wrap p::before {
   content: "";
   position: absolute;
   width: 24px;
@@ -1460,7 +1602,7 @@ main .parcel-details .container .whats-package .whats-package-wrap-content .what
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
 }
-main .parcel-details .container .whats-package .whats-package-wrap-content .whats-package-wrap input {
+.delivery-main .parcel-details .container .whats-package .whats-package-wrap-content .whats-package-wrap input {
   height: 0;
   width: 0;
   border: none;
@@ -1468,7 +1610,7 @@ main .parcel-details .container .whats-package .whats-package-wrap-content .what
   gap: 0;
   margin-bottom: 0;
 }
-main .parcel-details .container .whats-package input {
+.delivery-main .parcel-details .container .whats-package input {
   width: 100%;
   border: none;
   border-radius: 4px;

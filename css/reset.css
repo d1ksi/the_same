@@ -138,6 +138,16 @@ main {
   font-weight: 700;
   line-height: normal;
 }
+@media (max-width: 1100px) {
+  .title {
+    font-size: 36px;
+  }
+}
+@media (max-width: 850px) {
+  .title {
+    font-size: 32px;
+  }
+}
 
 h3 {
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
@@ -146,6 +156,11 @@ h3 {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+@media (max-width: 850px) {
+  h3 {
+    font-size: 20px;
+  }
 }
 
 h6 {
@@ -205,11 +220,22 @@ button,
   text-transform: uppercase;
   padding: 20px 24px;
 }
+@media (max-width: 1100px) {
+  button,
+  .accessibly {
+    padding: 20px 34px;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-size: 14px;
+  }
+}
 
 .accessibly {
   background: none;
   color: var(--Action-Brand-Dark-Blue-0B449D, #0b449d);
   padding: 0;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .tips {
@@ -225,14 +251,42 @@ button,
   gap: 8px;
   flex-wrap: wrap;
 }
+@media (max-width: 1300px) {
+  .tips {
+    width: 309px;
+  }
+}
+@media (max-width: 1100px) {
+  .tips {
+    width: 209px;
+    padding: 14px;
+  }
+}
+@media (max-width: 850px) {
+  .tips {
+    max-width: 100%;
+    padding: 24px;
+    box-shadow: 0px -6px 8px 0px rgba(22, 22, 22, 0.25) inset;
+  }
+}
 .tips.czech-republic-ukraine.active, .tips.ukraine-czech-republic.active {
   display: inline-flex;
+}
+@media (max-width: 850px) {
+  .tips.czech-republic-ukraine.active, .tips.ukraine-czech-republic.active {
+    display: none;
+  }
 }
 .tips .content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
+}
+@media (max-width: 1100px) {
+  .tips .content {
+    gap: 16px;
+  }
 }
 .tips .content .content-text ul {
   list-style: disc;
