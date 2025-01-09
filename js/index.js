@@ -72,36 +72,42 @@ document.querySelectorAll('.accessibly').forEach(button => {
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
-  const dropForDeliveryElements = document.querySelectorAll(".drop-for-delivery"); 
-  dropForDeliveryElements.forEach(function(dropForDelivery) {
-      const dropChoice = dropForDelivery.nextElementSibling;
-      const hintElement = dropForDelivery.querySelector(".hint");
-      const selectedElement = dropForDelivery.querySelector(".selected");
-      if (!dropChoice) {
-          console.error("Не найден элемент .drop-choice для этого .drop-for-delivery");
-          return;
-      }      
-      dropForDelivery.addEventListener("click", function() {
-          dropForDelivery.classList.toggle("active");
-          dropChoice.classList.toggle("active");
-      });
-      dropChoice.addEventListener("click", function(event) {
-          const cityElement = event.target.closest("div");
-          if (cityElement) {
-              const cityName = cityElement.querySelector("p").textContent;
-              selectedElement.textContent = cityName;
-              if (selectedElement.textContent.trim() !== "") {
-                  hintElement.classList.add("active");
-              } else {
-                  hintElement.classList.remove("active");
-              }
-              dropChoice.classList.remove("active");
-              dropForDelivery.classList.remove("active");
+document.addEventListener("DOMContentLoaded", function () {
+  const dropForDeliveryElements = document.querySelectorAll(".drop-for-delivery");
+  dropForDeliveryElements.forEach(function (dropForDelivery) {
+    const dropChoice = dropForDelivery.nextElementSibling;
+    const hintElement = dropForDelivery.querySelector(".hint");
+    const selectedElement = dropForDelivery.querySelector(".selected");
+    if (!dropChoice) {
+      console.error("Не найден элемент .drop-choice для этого .drop-for-delivery");
+      return;
+    }
+    dropForDelivery.addEventListener("click", function () {
+      dropForDelivery.classList.toggle("active");
+      dropChoice.classList.toggle("active");
+    });
+    dropChoice.addEventListener("click", function (event) {
+      const cityElement = event.target.closest("div");
+      if (cityElement) {
+        const cityNameElement = cityElement.querySelector("p");
+        if (cityNameElement) {
+          const cityName = cityNameElement.textContent;
+          selectedElement.textContent = cityName;
+          if (selectedElement.textContent.trim() !== "") {
+            hintElement.classList.add("active");
+          } else {
+            hintElement.classList.remove("active");
           }
-      });
+        } else {
+          console.error("Элемент <p> не найден внутри cityElement:", cityElement);
+        }
+        dropChoice.classList.remove("active");
+        dropForDelivery.classList.remove("active");
+      }
+    });
   });
 });
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -181,6 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
   const labels = document.querySelectorAll('.detail-wrap');
   const inputField = document.querySelector('.with-information-input');
+  const whatsPackageDiv = document.querySelector('.whats-package');
   labels.forEach(label => {
       label.addEventListener('click', (e) => {
           const p = label.querySelector('p');
@@ -204,10 +211,17 @@ document.addEventListener('DOMContentLoaded', () => {
                   inputField.classList.remove('active');
               }
           }
+          if (label.classList.contains('with-information')) {
+              whatsPackageDiv.classList.remove('active');
+          } else {
+              whatsPackageDiv.classList.add('active');
+          }
+
           e.preventDefault();
       });
   });
 });
+
 
 
 const paragraphs = document.querySelectorAll('.whats-package-wrap p');
