@@ -1,0 +1,35 @@
+.parcels-page {
+  background: var(--Background-White-FFFFFF, #fff);
+  .title-wrap {
+    margin-top: 56px;
+    margin-bottom: 40px;
+    @media (max-width: 800px) {
+      margin: 24px 0px;
+    }
+  }
+  .shipping-instructions {
+    margin: 0px -120px -80px -120px;
+    padding: 80px 120px;
+    background: #f9f9fb;
+    @media (max-width: 1350px) {
+      margin: 0px -60px -80px -60px;
+      padding: 70px 60px;
+    }
+    @media (max-width: 1350px) {
+      margin: 0px -30px -80px -30px;
+      padding: 80px 30px;
+    }
+    @media (max-width: 1350px) {
+      margin: 0px -16px -80px -16px;
+      padding: 80px 16px;
+    }
+    @media (max-width: 800px) {
+      padding-top: 0;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+    }
+  }
+}

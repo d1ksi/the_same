@@ -1629,3 +1629,152 @@ body main .main-content .container .contact-block form button {
   line-height: normal;
   margin-bottom: 40px;
 }
+
+.parcels-page {
+  background: var(--Background-White-FFFFFF, #fff);
+}
+.parcels-page .title-wrap {
+  margin-top: 56px;
+  margin-bottom: 40px;
+}
+@media (max-width: 800px) {
+  .parcels-page .title-wrap {
+    margin: 24px 0px;
+  }
+}
+.parcels-page .shipping-instructions {
+  margin: 0px -120px -80px -120px;
+  padding: 80px 120px;
+  background: #f9f9fb;
+}
+@media (max-width: 1350px) {
+  .parcels-page .shipping-instructions {
+    margin: 0px -60px -80px -60px;
+    padding: 70px 60px;
+  }
+}
+@media (max-width: 1350px) {
+  .parcels-page .shipping-instructions {
+    margin: 0px -30px -80px -30px;
+    padding: 80px 30px;
+  }
+}
+@media (max-width: 1350px) {
+  .parcels-page .shipping-instructions {
+    margin: 0px -16px -80px -16px;
+    padding: 80px 16px;
+  }
+}
+@media (max-width: 800px) {
+  .parcels-page .shipping-instructions {
+    padding-top: 0;
+  }
+}
+.parcels-page .shipping-instructions .container {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.shipping-instructions-content {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 34px;
+}
+@media (max-width: 800px) {
+  .shipping-instructions-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+.shipping-instructions-content .img-wrapper {
+  overflow: hidden;
+  border-radius: 16px;
+  max-width: 584px;
+  min-width: 400px;
+  width: 100%;
+}
+@media (max-width: 800px) {
+  .shipping-instructions-content .img-wrapper {
+    padding-top: 0;
+    max-width: calc(100% + 32px);
+    min-width: calc(100% + 32px);
+    width: calc(100% + 32px);
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    margin: 0px -16px;
+  }
+}
+.shipping-instructions-content .img-wrapper img {
+  max-width: 584px;
+  min-width: 400px;
+  width: 100%;
+  max-height: 272px;
+  flex-shrink: 0;
+}
+@media (max-width: 800px) {
+  .shipping-instructions-content .img-wrapper img {
+    max-width: calc(100% + 32px);
+    min-width: calc(100% + 32px);
+    width: calc(100% + 32px);
+  }
+}
+.shipping-instructions-content .from-ua-to-cz-content,
+.shipping-instructions-content .from-cz-to-ua-content {
+  max-width: 584px;
+  width: 100%;
+}
+@media (max-width: 800px) {
+  .shipping-instructions-content .from-ua-to-cz-content,
+  .shipping-instructions-content .from-cz-to-ua-content {
+    max-width: 100%;
+  }
+}
+.shipping-instructions-content .from-ua-to-cz-content h3,
+.shipping-instructions-content .from-cz-to-ua-content h3 {
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+@media (max-width: 800px) {
+  .shipping-instructions-content .from-ua-to-cz-content h3,
+  .shipping-instructions-content .from-cz-to-ua-content h3 {
+    font-size: 26px;
+  }
+}
+.shipping-instructions-content .from-ua-to-cz-content .text-content,
+.shipping-instructions-content .from-cz-to-ua-content .text-content {
+  display: flex;
+  flex-direction: column;
+}
+.shipping-instructions-content .from-ua-to-cz-content .text-content.shipping-instructions-text-block1,
+.shipping-instructions-content .from-cz-to-ua-content .text-content.shipping-instructions-text-block1 {
+  gap: 8px;
+}
+.shipping-instructions-content .from-ua-to-cz-content .text-content.shipping-instructions-text-block2,
+.shipping-instructions-content .from-cz-to-ua-content .text-content.shipping-instructions-text-block2 {
+  gap: 16px;
+}
+.shipping-instructions-content .from-ua-to-cz-content .text-content p,
+.shipping-instructions-content .from-cz-to-ua-content .text-content p {
+  color: var(--Accesible-text-Main-1E1F24, #1e1f24);
+  font-family: "Google Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  text-wrap: wrap;
+}
+.shipping-instructions-content .from-ua-to-cz-content .text-content p.text-icon,
+.shipping-instructions-content .from-cz-to-ua-content .text-content p.text-icon {
+  margin-top: 8px;
+}
+@media (max-width: 800px) {
+  .shipping-instructions-content .from-ua-to-cz-content .text-content p.text-icon,
+  .shipping-instructions-content .from-cz-to-ua-content .text-content p.text-icon {
+    margin-top: 16px;
+  }
+}
