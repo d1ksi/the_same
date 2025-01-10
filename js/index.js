@@ -117,77 +117,110 @@ document.addEventListener('DOMContentLoaded', () => {
   const parcelButton = document.querySelector('.parcel-btn');
   const parcelTipsBlock = document.querySelector('.parcel-tips');
   const parcelHintCircle = document.querySelector('.parcel-hint-circle');
-
-  // Обработка кликов по routeBlocks, если они существуют
-  if (routeBlocks.length > 0) {
-    routeBlocks.forEach(block => {
-      block.addEventListener('click', () => {
-        routeBlocks.forEach(b => {
-          b.classList.remove('active');
-          const checkBox = b.querySelector('.check-box');
-          if (checkBox) checkBox.classList.remove('active');
-
-          const svgElement = b.querySelector('svg.hint-circle');
-          if (svgElement) {
-            svgElement.classList.add('hiden');
-          }
-        });
-
-        tipsBlocks.forEach(t => {
-          t.classList.remove('active');
-        });
-
-        block.classList.add('active');
-        const checkBox = block.querySelector('.check-box');
-        if (checkBox) checkBox.classList.add('active');
-
-        const relatedTipsClass = block.classList.contains('czech-republic-ukraine')
-          ? 'czech-republic-ukraine'
-          : 'ukraine-czech-republic';
-        const relatedTips = document.querySelector(`.tips.${relatedTipsClass}`);
-        if (relatedTips) {
-          relatedTips.classList.add('active');
-          const svgElement = block.querySelector('svg.hint-circle');
-          if (svgElement) {
-            svgElement.classList.remove('hiden');
-          }
+  routeBlocks.forEach(block => {
+    block.addEventListener('click', () => {
+      routeBlocks.forEach(b => {
+        b.classList.remove('active');
+        b.querySelector('.check-box').classList.remove('active');
+        const svgElement = b.querySelector('svg.hint-circle');
+        if (svgElement) {
+          svgElement.classList.add('hiden');
         }
       });
+      tipsBlocks.forEach(t => {
+        t.classList.remove('active');
+      });
+      block.classList.add('active');
+      block.querySelector('.check-box').classList.add('active');
+      const relatedTipsClass = block.classList.contains('czech-republic-ukraine')
+        ? 'czech-republic-ukraine'
+        : 'ukraine-czech-republic';
+      const relatedTips = document.querySelector(`.tips.${relatedTipsClass}`);
+      if (relatedTips) {
+        relatedTips.classList.add('active');
+        const svgElement = block.querySelector('svg.hint-circle');
+        if (svgElement) {
+          svgElement.classList.remove('hiden');
+        }
+      }
     });
-  } 
-  if (accessiblyButtons.length > 0) {
-    accessiblyButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const tipsBlock = button.closest('.tips');
-        if (tipsBlock) {
-          tipsBlock.classList.remove('active');
-          const routeBlock = tipsBlock.closest('.rout-wrap');
-          const svgElement = routeBlock?.querySelector('svg.hint-circle');
-          if (svgElement) {
-            svgElement.classList.add('hiden');
-            if (routeBlocks[0] === routeBlock) {
-              svgElement.classList.add('accept');
-              console.log('Класс accept добавлен к SVG первого блока');
-            } else {
-              console.log('Класс accept не добавлен, это не первый блок');
-            }
+  });
+  accessiblyButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const tipsBlock = button.closest('.tips');
+      if (tipsBlock) {
+        tipsBlock.classList.remove('active');
+        const routeBlock = tipsBlock.closest('.rout-wrap');
+        const svgElement = routeBlock?.querySelector('svg.hint-circle'); // Работаем с SVG внутри текущего блока
+
+        if (svgElement) {
+          svgElement.classList.add('hiden');
+          if (routeBlocks[0] === routeBlock) {
+            svgElement.classList.add('accept');
+            console.log('Класс accept добавлен к SVG первого блока');
           } else {
-            console.log('SVG элемент не найден для этого блока');
+            console.log('Класс accept не добавлен, это не первый блок');
           }
         } else {
-          console.log('Tips блок не найден для кнопки');
+          console.log('SVG элемент не найден для этого блока');
         }
-      });
+      } else {
+        console.log('Tips блок не найден для кнопки');
+      }
     });
-  }
+  });
   if (parcelButton && parcelTipsBlock && parcelHintCircle) {
     parcelButton.addEventListener('click', () => {
       parcelTipsBlock.style.display = 'none';
       parcelHintCircle.classList.add('hidden');
     });
+  } else {
+    console.error('Не удалось найти один из элементов:', {
+      parcelButton,
+      parcelTipsBlock,
+      parcelHintCircle,
+    });
   }
 });
 
+
+document.addEventListener('DOMContentLoaded', () => {
+  const labels = document.querySelectorAll('.detail-wrap');
+  const inputField = document.querySelector('.with-information-input');
+  const whatsPackageDiv = document.querySelector('.whats-package');
+  labels.forEach(label => {
+      label.addEventListener('click', (e) => {
+          const p = label.querySelector('p');
+          const checkbox = label.querySelector('input');
+          if (p.classList.contains('checked')) {
+              p.classList.remove('checked');
+              checkbox.checked = false;
+              if (label.classList.contains('with-input')) {
+                  inputField.classList.remove('active');
+              }
+          } else {
+              labels.forEach(l => {
+                  l.querySelector('p').classList.remove('checked');
+                  l.querySelector('input').checked = false;
+              });
+              p.classList.add('checked');
+              checkbox.checked = true;
+              if (label.classList.contains('with-input')) {
+                  inputField.classList.add('active');
+              } else {
+                  inputField.classList.remove('active');
+              }
+          }
+          if (label.classList.contains('with-information')) {
+              whatsPackageDiv.classList.remove('active');
+          } else {
+              whatsPackageDiv.classList.add('active');
+          }
+
+          e.preventDefault();
+      });
+  });
+});
 
 
 
@@ -286,68 +319,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  function updateTipsBasedOnRoute() {
-      document.querySelectorAll('.tips').forEach(block => {
-          block.classList.remove('active');
-          block.style.display = '';
-      });
-      const activeRoute = document.querySelector('.rout-wrap.active');
-      if (activeRoute) {
-          const routeClass = activeRoute.classList.contains('czech-republic-ukraine')
-              ? 'czech-republic-ukraine'
-              : 'ukraine-czech-republic';
-          const tipsBlock = document.querySelector(`.tips.${routeClass}`);
-          if (tipsBlock) {
-              tipsBlock.classList.add('active');
-              tipsBlock.style.display = 'inline-flex';
-          }
+function updateTipsBasedOnRoute() {
+  document.querySelectorAll('.tips').forEach(block => {
+      block.classList.remove('active');
+      block.style.display = '';
+  });
+  const activeRoute = document.querySelector('.rout-wrap.active');
+  if (activeRoute) {
+      const routeClass = activeRoute.classList.contains('czech-republic-ukraine')
+          ? 'czech-republic-ukraine'
+          : 'ukraine-czech-republic';
+      const tipsBlock = document.querySelector(`.tips.${routeClass}`);
+      if (tipsBlock) {
+          tipsBlock.classList.add('active');
+          tipsBlock.style.display = 'inline-flex';
       }
   }
+}
 
-  const svgTitleWrap = document.querySelector('.svg-title-wrap');
-  if (svgTitleWrap) {
-      svgTitleWrap.addEventListener('click', () => {
-          document.querySelectorAll('.parcel-tips').forEach(block => {
-              block.classList.remove('active');
-              block.style.display = '';
-          });
-          updateTipsBasedOnRoute();
-          const parcelTipsBlock = document.querySelector('.parcel-tips');
-          if (parcelTipsBlock) {
-              parcelTipsBlock.classList.add('active');
-              parcelTipsBlock.style.display = 'inline-flex';
-          }
-      });
+document.querySelector('.svg-title-wrap').addEventListener('click', () => {
+  document.querySelectorAll('.parcel-tips').forEach(block => {
+      block.classList.remove('active');
+      block.style.display = '';
+  });
+  updateTipsBasedOnRoute();
+  const parcelTipsBlock = document.querySelector('.parcel-tips');
+  if (parcelTipsBlock) {
+      parcelTipsBlock.classList.add('active');
+      parcelTipsBlock.style.display = 'inline-flex';
   }
-
-  document.querySelectorAll('.accessibly').forEach(button => {
-      if (button) {
-          button.addEventListener('click', () => {
-              const parentBlock = button.closest('.tips');
-              if (parentBlock) {
-                  parentBlock.classList.remove('active');
-                  parentBlock.style.display = '';
-              }
-          });
+});
+document.querySelectorAll('.accessibly').forEach(button => {
+  button.addEventListener('click', () => {
+      const parentBlock = button.closest('.tips');
+      if (parentBlock) {
+          parentBlock.classList.remove('active');
+          parentBlock.style.display = '';
       }
   });
-
-  document.querySelectorAll('.rout-wrap').forEach(route => {
-      route.addEventListener('click', () => {
-          document.querySelectorAll('.rout-wrap').forEach(r => {
-              r.classList.remove('active');
-              const checkBox = r.querySelector('.check-box');
-              if (checkBox) {
-                  checkBox.classList.remove('active');
-              }
-          });
-          route.classList.add('active');
-          const checkBox = route.querySelector('.check-box');
-          if (checkBox) {
-              checkBox.classList.add('active');
-          }
-          updateTipsBasedOnRoute();
+});
+document.querySelectorAll('.rout-wrap').forEach(route => {
+  route.addEventListener('click', () => {
+      document.querySelectorAll('.rout-wrap').forEach(r => {
+          r.classList.remove('active');
+          r.querySelector('.check-box').classList.remove('active');
       });
+      route.classList.add('active');
+      route.querySelector('.check-box').classList.add('active');
+      updateTipsBasedOnRoute();
   });
 });
