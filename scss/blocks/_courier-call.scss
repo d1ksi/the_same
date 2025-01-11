@@ -1,85 +1,83 @@
-.courier-call {
-  padding: 0;
+.section-curier-call {
   padding-top: 24px;
-  .section-curier-call {
-    .container {
-      .title-nav-wrapper {
-        background: var(--Background-White-FFFFFF, #fff);
-        margin: 0px 120px;
-        @media (max-width: 1350px) {
-          margin: 0px 60px;
-        }
-        @media (max-width: 1040px) {
-          margin: 0px 30px;
-        }
-        @media (max-width: 800px) {
-          margin: 0px 16px;
-        }
+  margin-top: 75px;
+  .container {
+    .title-nav-wrapper {
+      background: var(--Background-White-FFFFFF, #fff);
+      margin: 0px 120px;
+      @media (max-width: 1350px) {
+        margin: 0px 60px;
       }
-      .main-content {
-        background: #f9f9fb;
-        .container {
+      @media (max-width: 1040px) {
+        margin: 0px 30px;
+      }
+      @media (max-width: 800px) {
+        margin: 0px 16px;
+      }
+    }
+    .courier-call-main-content {
+      background: #f9f9fb;
+      .container {
+        display: flex;
+        flex-direction: column;
+        .courier-bg {
+          height: 500px;
+          width: 100%;
+          background-image: url("../../photo/courier-page/bg.png");
+          background-size: cover;
+          background-position: center;
           display: flex;
-          flex-direction: column;
-          .courier-bg {
-            height: 500px;
-            width: 100%;
-            background-image: url("../../photo/courier-page/bg.png");
+          align-items: center;
+          justify-content: end;
+          @media (max-width: 1040px) {
+            height: 400px;
+          }
+          @media (max-width: 800px) {
+            height: 285px;
+          }
+          .title-logo {
+            background-image: url("../../photo/courier-page/Group\ 53.png");
             background-size: cover;
             background-position: center;
+            z-index: 2;
+            width: 380px;
+            height: 380px;
             display: flex;
-            align-items: center;
-            justify-content: end;
+            align-items: end;
+            justify-content: center;
+            margin-right: 300px;
+            @media (max-width: 1350px) {
+              margin-right: 150px;
+            }
             @media (max-width: 1040px) {
-              height: 400px;
+              margin-right: 120px;
+              width: 280px;
+              height: 280px;
             }
             @media (max-width: 800px) {
-              height: 285px;
+              margin-right: 66px;
+              width: 120px;
+              height: 120px;
             }
-            .title-logo {
-              background-image: url("../../photo/courier-page/Group\ 53.png");
-              background-size: cover;
-              background-position: center;
-              z-index: 2;
-              width: 380px;
-              height: 380px;
-              display: flex;
-              align-items: end;
-              justify-content: center;
-              margin-right: 300px;
-              @media (max-width: 1350px) {
-                margin-right: 150px;
-              }
-              @media (max-width: 1040px) {
-                margin-right: 120px;
-                width: 280px;
-                height: 280px;
-              }
+            .header-logo-title {
+              margin-bottom: 35px;
               @media (max-width: 800px) {
-                margin-right: 66px;
-                width: 120px;
-                height: 120px;
+                margin-bottom: 10px;
               }
-              .header-logo-title {
-                margin-bottom: 35px;
+              p {
+                font-size: 55.198px;
+                text-wrap: nowrap;
+                @media (max-width: 1040px) {
+                  font-size: 38px;
+                }
                 @media (max-width: 800px) {
-                  margin-bottom: 10px;
+                  font-size: 16px;
                 }
-                p {
-                  font-size: 55.198px;
-                  text-wrap: nowrap;
-                  @media (max-width: 1040px) {
-                    font-size: 38px;
-                  }
-                  @media (max-width: 800px) {
-                    font-size: 16px;
-                  }
-                }
-                svg {
-                  @media (max-width: 800px) {
-                    width: 15px;
-                    width: 50px;
-                  }
+              }
+              svg {
+                @media (max-width: 800px) {
+                  width: 15px;
+                  width: 50px;
                 }
               }
             }

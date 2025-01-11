@@ -137,6 +137,25 @@ body {
 .main-content-box {
   margin-top: 75px;
   padding: 0px 120px;
+  padding-top: 24px;
+  padding-bottom: 80px;
+  @media (max-width: 1350px) {
+    padding: 0px 60px;
+    padding-top: 24px;
+    padding-bottom: 80px;
+  }
+  @media (max-width: 1040px) {
+    padding: 0px 30px;
+    padding-top: 24px;
+    padding-bottom: 48px;
+  }
+  @media (max-width: 800px) {
+    padding: 16px;
+    padding-top: 24px;
+    padding-bottom: 48px;
+  }
+}
+.with-chat {
   position: relative;
   .chat {
     z-index: 999;
@@ -144,16 +163,6 @@ body {
     position: fixed;
     right: 20px;
     top: calc(100vh / 2);
-  }
-  @media (max-width: 1350px) {
-    padding: 0px 60px;
-  }
-  @media (max-width: 1040px) {
-    padding: 0px 30px;
-  }
-  @media (max-width: 800px) {
-    padding: 16px;
-    padding-bottom: 48px;
   }
 }
 
@@ -187,10 +196,6 @@ body {
 
 .main-nav {
   width: 100%;
-  padding-top: 24px;
-  @media (max-width: 1040px) {
-    padding-top: 0px;
-  }
   .container {
     a,
     span {

@@ -920,17 +920,42 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   background: #f2f2f5;
   position: relative;
   overflow-y: hidden;
+  margin-top: 75px;
+  padding: 0px 120px;
+  padding-top: 24px;
+  padding-bottom: 80px;
 }
-.delivery-main .title-wrap {
+@media (max-width: 1350px) {
+  .delivery-main {
+    padding: 0px 60px;
+    padding-top: 24px;
+    padding-bottom: 80px;
+  }
+}
+@media (max-width: 1040px) {
+  .delivery-main {
+    padding: 0px 30px;
+    padding-top: 24px;
+    padding-bottom: 48px;
+  }
+}
+@media (max-width: 800px) {
+  .delivery-main {
+    padding: 16px;
+    padding-top: 24px;
+    padding-bottom: 48px;
+  }
+}
+.delivery-main .container .title-wrap {
   margin-top: 32px;
 }
-.delivery-main .title-wrap .container {
+.delivery-main .container .title-wrap .container {
   display: flex;
   justify-content: space-between;
   align-items: start;
   gap: 10px;
 }
-.delivery-main .title-wrap .container .svg-title-wrap {
+.delivery-main .container .title-wrap .container .svg-title-wrap {
   margin-top: 10px;
   cursor: pointer;
   display: none;
@@ -947,17 +972,17 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   -o-border-radius: 50%;
 }
 @media (max-width: 850px) {
-  .delivery-main .title-wrap .container .svg-title-wrap {
+  .delivery-main .container .title-wrap .container .svg-title-wrap {
     display: flex;
   }
 }
 @media (max-width: 1100px) {
-  .delivery-main .title-wrap {
+  .delivery-main .container .title-wrap {
     margin-top: 24px;
   }
 }
-.delivery-main .czech-republic-ukraine-box,
-.delivery-main .ukraine-czech-republic-box {
+.delivery-main .container .czech-republic-ukraine-box,
+.delivery-main .container .ukraine-czech-republic-box {
   display: none;
   position: fixed;
   left: 0;
@@ -970,12 +995,12 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   height: 100vh;
   background-color: rgba(242, 242, 245, 0.5);
 }
-.delivery-main .czech-republic-ukraine-box.active,
-.delivery-main .ukraine-czech-republic-box.active {
+.delivery-main .container .czech-republic-ukraine-box.active,
+.delivery-main .container .ukraine-czech-republic-box.active {
   display: flex;
 }
-.delivery-main .czech-republic-ukraine-box .container,
-.delivery-main .ukraine-czech-republic-box .container {
+.delivery-main .container .czech-republic-ukraine-box .container,
+.delivery-main .container .ukraine-czech-republic-box .container {
   padding: 0px 32px;
   max-width: 648px;
   display: flex;
@@ -987,25 +1012,25 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   box-shadow: 0px 2px 10px 0px rgba(36, 36, 34, 0.25);
 }
 @media (max-width: 850px) {
-  .delivery-main .czech-republic-ukraine-box .container,
-  .delivery-main .ukraine-czech-republic-box .container {
+  .delivery-main .container .czech-republic-ukraine-box .container,
+  .delivery-main .container .ukraine-czech-republic-box .container {
     max-width: 400px;
   }
 }
-.delivery-main .czech-republic-ukraine-box .container .close,
-.delivery-main .ukraine-czech-republic-box .container .close {
+.delivery-main .container .czech-republic-ukraine-box .container .close,
+.delivery-main .container .ukraine-czech-republic-box .container .close {
   width: 100%;
   padding: 24px;
   padding-bottom: 0;
   display: flex;
   justify-content: flex-end;
 }
-.delivery-main .czech-republic-ukraine-box .container .close svg,
-.delivery-main .ukraine-czech-republic-box .container .close svg {
+.delivery-main .container .czech-republic-ukraine-box .container .close svg,
+.delivery-main .container .ukraine-czech-republic-box .container .close svg {
   cursor: pointer;
 }
-.delivery-main .czech-republic-ukraine-box .container .price,
-.delivery-main .ukraine-czech-republic-box .container .price {
+.delivery-main .container .czech-republic-ukraine-box .container .price,
+.delivery-main .container .ukraine-czech-republic-box .container .price {
   margin-top: 24px;
   margin-bottom: 8px;
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
@@ -1015,8 +1040,8 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   font-weight: 700;
   line-height: normal;
 }
-.delivery-main .czech-republic-ukraine-box .container .approximate-delivery-time,
-.delivery-main .ukraine-czech-republic-box .container .approximate-delivery-time {
+.delivery-main .container .czech-republic-ukraine-box .container .approximate-delivery-time,
+.delivery-main .container .ukraine-czech-republic-box .container .approximate-delivery-time {
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
   text-align: center;
   font-family: "Google Sans";
@@ -1026,8 +1051,8 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   line-height: normal;
   margin-bottom: 40px;
 }
-.delivery-main .czech-republic-ukraine-box .container .help-info,
-.delivery-main .ukraine-czech-republic-box .container .help-info {
+.delivery-main .container .czech-republic-ukraine-box .container .help-info,
+.delivery-main .container .ukraine-czech-republic-box .container .help-info {
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
   text-align: center;
   font-family: "Google Sans";
@@ -1037,8 +1062,8 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   line-height: normal;
   margin-bottom: 26px;
 }
-.delivery-main .czech-republic-ukraine-box .container .info,
-.delivery-main .ukraine-czech-republic-box .container .info {
+.delivery-main .container .czech-republic-ukraine-box .container .info,
+.delivery-main .container .ukraine-czech-republic-box .container .info {
   max-width: 584px;
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
   text-align: center;
@@ -1049,20 +1074,20 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   line-height: normal;
   margin-bottom: 24px;
 }
-.delivery-main .czech-republic-ukraine-box .container .text,
-.delivery-main .czech-republic-ukraine-box .container .tel,
-.delivery-main .ukraine-czech-republic-box .container .text,
-.delivery-main .ukraine-czech-republic-box .container .tel {
+.delivery-main .container .czech-republic-ukraine-box .container .text,
+.delivery-main .container .czech-republic-ukraine-box .container .tel,
+.delivery-main .container .ukraine-czech-republic-box .container .text,
+.delivery-main .container .ukraine-czech-republic-box .container .tel {
   width: 100%;
   display: flex;
   justify-content: space-between;
   gap: 16px;
   margin-bottom: 16px;
 }
-.delivery-main .czech-republic-ukraine-box .container .text input,
-.delivery-main .czech-republic-ukraine-box .container .tel input,
-.delivery-main .ukraine-czech-republic-box .container .text input,
-.delivery-main .ukraine-czech-republic-box .container .tel input {
+.delivery-main .container .czech-republic-ukraine-box .container .text input,
+.delivery-main .container .czech-republic-ukraine-box .container .tel input,
+.delivery-main .container .ukraine-czech-republic-box .container .text input,
+.delivery-main .container .ukraine-czech-republic-box .container .tel input {
   width: 100%;
   height: 48px;
   border-radius: 4px;
@@ -1075,13 +1100,13 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   font-weight: 400;
   line-height: normal;
 }
-.delivery-main .czech-republic-ukraine-box .container button,
-.delivery-main .ukraine-czech-republic-box .container button {
+.delivery-main .container .czech-republic-ukraine-box .container button,
+.delivery-main .container .ukraine-czech-republic-box .container button {
   max-width: 355px;
   width: 100%;
   margin-bottom: 49px;
 }
-.delivery-main .about-delivery {
+.delivery-main .container .about-delivery {
   margin-top: 24px;
   padding: 32px 40px;
   border-radius: 8px;
@@ -1091,18 +1116,18 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   position: relative;
 }
 @media (max-width: 1300px) {
-  .delivery-main .about-delivery {
+  .delivery-main .container .about-delivery {
     min-width: 620px;
     padding: 32px 20px;
   }
 }
 @media (max-width: 1100px) {
-  .delivery-main .about-delivery {
+  .delivery-main .container .about-delivery {
     min-width: 520px;
   }
 }
 @media (max-width: 850px) {
-  .delivery-main .about-delivery {
+  .delivery-main .container .about-delivery {
     max-width: calc(100% + 32px);
     min-width: calc(100% + 32px);
     margin: 0px -16px;
@@ -1110,21 +1135,21 @@ header .container .header-body .header-menu .select-for-mobile ul div {
     margin-top: 24px;
   }
 }
-.delivery-main .about-delivery .container h3 {
+.delivery-main .container .about-delivery .container h3 {
   margin-bottom: 24px;
 }
-.delivery-main .about-delivery .container .hint-circle {
+.delivery-main .container .about-delivery .container .hint-circle {
   position: absolute;
   right: -8px;
   top: 136px;
   cursor: pointer;
 }
 @media (max-width: 850px) {
-  .delivery-main .about-delivery .container .hint-circle {
+  .delivery-main .container .about-delivery .container .hint-circle {
     display: none;
   }
 }
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap {
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -1132,52 +1157,52 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   background: #fff;
 }
 @media (max-width: 1300px) {
-  .delivery-main .about-delivery .container .about-delivery-contetn-wrap {
+  .delivery-main .container .about-delivery .container .about-delivery-contetn-wrap {
     gap: 16px;
   }
 }
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .route h5 {
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .route h5 {
   margin-bottom: 8px;
 }
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap {
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap {
   display: flex;
   border-radius: 4px;
   border: 1px solid var(--Stroke-CDCED7, #cdced7);
   position: relative;
 }
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap .tips {
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap .tips {
   position: absolute;
   right: -460px;
 }
 @media (max-width: 1300px) {
-  .delivery-main .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap .tips {
+  .delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap .tips {
     right: -360px;
   }
 }
 @media (max-width: 1100px) {
-  .delivery-main .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap .tips {
+  .delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap .tips {
     right: -250px;
   }
 }
 @media (max-width: 850px) {
-  .delivery-main .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap .tips {
+  .delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap .tips {
     width: 100%;
     padding: 14px;
     left: 0px;
     top: 0;
   }
 }
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap .rout-wrap {
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap .rout-wrap {
   cursor: pointer;
   display: flex;
   align-items: center;
   width: 50%;
   padding: 14px 16px;
 }
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap .rout-wrap.active {
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap .rout-wrap.active {
   background: #e6f3ff;
 }
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap .rout-wrap p {
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .route .rout-content-wrap .rout-wrap p {
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
   font-family: "Open Sans";
   font-size: 16px;
@@ -1185,29 +1210,29 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   font-weight: 400;
   line-height: normal;
 }
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap {
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap {
   display: flex;
   gap: 16px;
   justify-content: space-between;
 }
 @media (max-width: 1300px) {
-  .delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap {
+  .delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap {
     flex-direction: column;
   }
 }
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post {
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post {
   display: flex;
   flex-direction: column;
   gap: 8px;
   width: 100%;
 }
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-for-delivery,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-for-delivery,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-for-delivery,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-for-delivery {
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-for-delivery,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-for-delivery,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-for-delivery,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-for-delivery {
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -1217,23 +1242,23 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   height: 48px;
   padding: 12px 16px;
 }
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-for-delivery.active,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-for-delivery.active,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-for-delivery.active,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-for-delivery.active {
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-for-delivery.active,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-for-delivery.active,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-for-delivery.active,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-for-delivery.active {
   position: relative;
   border: 1px solid var(--Action-Brand-Dark-Blue-0B449D, #0b449d);
 }
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-for-delivery.active .hint-and-selected .hint,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-for-delivery.active .hint-and-selected .hint,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-for-delivery.active .hint-and-selected .hint,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-for-delivery.active .hint-and-selected .hint {
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-for-delivery.active .hint-and-selected .hint,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-for-delivery.active .hint-and-selected .hint,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-for-delivery.active .hint-and-selected .hint,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-for-delivery.active .hint-and-selected .hint {
   color: var(--Action-Brand-Dark-Blue-0B449D, #0b449d);
 }
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .whats-package-check-box,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .whats-package-check-box,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .whats-package-check-box,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .whats-package-check-box {
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .whats-package-check-box,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .whats-package-check-box,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .whats-package-check-box,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .whats-package-check-box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1246,17 +1271,17 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
 }
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .whats-package-check-box.active,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .whats-package-check-box.active,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .whats-package-check-box.active,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .whats-package-check-box.active {
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .whats-package-check-box.active,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .whats-package-check-box.active,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .whats-package-check-box.active,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .whats-package-check-box.active {
   border: 2px solid #1a64db;
   background-color: #1a64db;
 }
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice {
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice {
   z-index: 10;
   display: none;
   flex-direction: column;
@@ -1275,49 +1300,49 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   box-shadow: 0px 2px 10px 0px rgba(36, 36, 34, 0.25);
   overflow: auto;
 }
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice::-webkit-scrollbar,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice::-webkit-scrollbar,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice::-webkit-scrollbar,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice::-webkit-scrollbar {
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice::-webkit-scrollbar,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice::-webkit-scrollbar,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice::-webkit-scrollbar,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice::-webkit-scrollbar {
   width: 8px;
   height: 25.744px;
 }
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice::-webkit-scrollbar-thumb,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice::-webkit-scrollbar-thumb,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice::-webkit-scrollbar-thumb,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice::-webkit-scrollbar-thumb {
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice::-webkit-scrollbar-thumb,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice::-webkit-scrollbar-thumb,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice::-webkit-scrollbar-thumb,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice::-webkit-scrollbar-thumb {
   background-color: #cdced7;
   border-radius: 4px;
   border: 1px solid #cdced7;
 }
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice::-webkit-scrollbar-track,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice::-webkit-scrollbar-track,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice::-webkit-scrollbar-track,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice::-webkit-scrollbar-track {
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice::-webkit-scrollbar-track,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice::-webkit-scrollbar-track,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice::-webkit-scrollbar-track,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice::-webkit-scrollbar-track {
   background-color: #f0f0f3;
   border-radius: 4px;
   border: 1px solid #cdced7;
 }
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice.active,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice.active,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice.active,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice.active {
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice.active,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice.active,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice.active,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice.active {
   display: flex;
 }
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice div,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice div,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice div,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice div {
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice div,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice div,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice div,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice div {
   cursor: pointer;
 }
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice div p,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice div span,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice div p,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice div span,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice div p,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice div span,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice div p,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice div span {
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice div p,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice div span,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice div p,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice div span,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice div p,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice div span,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice div p,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice div span {
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
   font-family: "Open Sans";
   font-size: 16px;
@@ -1325,21 +1350,21 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   font-weight: 400;
   line-height: normal;
 }
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice div span,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice div span,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice div span,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice div span {
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice div span,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice div span,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice div span,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice div span {
   color: var(--Accesible-text-Additional-62636C, #62636c);
   font-size: 12px;
 }
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice #popular,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice #popular,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice #popular,
-.delivery-main .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice #popular {
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .from-where .drop-choice #popular,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .how-to-convey .drop-choice #popular,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .whereabout .drop-choice #popular,
+.delivery-main .container .about-delivery .container .about-delivery-contetn-wrap .content-wrap .branch-of-the-new-post .drop-choice #popular {
   font-size: 16px;
   color: var(--Accesible-text-Additional-62636C, #62636c);
 }
-.delivery-main .parcel-details {
+.delivery-main .container .parcel-details {
   padding: 32px 40px;
   border-radius: 8px;
   background: #fff;
@@ -1349,54 +1374,54 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   position: relative;
 }
 @media (max-width: 1300px) {
-  .delivery-main .parcel-details {
+  .delivery-main .container .parcel-details {
     min-width: 620px;
     padding: 32px 20px;
   }
 }
 @media (max-width: 1100px) {
-  .delivery-main .parcel-details {
+  .delivery-main .container .parcel-details {
     min-width: 520px;
   }
 }
 @media (max-width: 850px) {
-  .delivery-main .parcel-details {
+  .delivery-main .container .parcel-details {
     max-width: calc(100% + 32px);
     min-width: 100%;
     margin: 0px -16px;
   }
 }
-.delivery-main .parcel-details .container .hint-circle {
+.delivery-main .container .parcel-details .container .hint-circle {
   position: absolute;
   right: -8px;
   top: 87px;
 }
 @media (max-width: 850px) {
-  .delivery-main .parcel-details .container .hint-circle {
+  .delivery-main .container .parcel-details .container .hint-circle {
     display: none;
   }
 }
-.delivery-main .parcel-details .container .parcel-tips {
+.delivery-main .container .parcel-details .container .parcel-tips {
   display: block;
   position: absolute;
   top: 75px;
   right: -440px;
 }
-.delivery-main .parcel-details .container .parcel-tips.active {
+.delivery-main .container .parcel-details .container .parcel-tips.active {
   display: block;
 }
 @media (max-width: 1300px) {
-  .delivery-main .parcel-details .container .parcel-tips {
+  .delivery-main .container .parcel-details .container .parcel-tips {
     right: -340px;
   }
 }
 @media (max-width: 1100px) {
-  .delivery-main .parcel-details .container .parcel-tips {
+  .delivery-main .container .parcel-details .container .parcel-tips {
     right: -230px;
   }
 }
 @media (max-width: 850px) {
-  .delivery-main .parcel-details .container .parcel-tips {
+  .delivery-main .container .parcel-details .container .parcel-tips {
     width: 100%;
     display: none;
     right: 0px;
@@ -1404,20 +1429,20 @@ header .container .header-body .header-menu .select-for-mobile ul div {
     z-index: 4;
   }
 }
-.delivery-main .parcel-details .container .detail {
+.delivery-main .container .parcel-details .container .detail {
   margin-top: 24px;
   margin-bottom: 42px;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-.delivery-main .parcel-details .container .detail .detail-wrap {
+.delivery-main .container .parcel-details .container .detail .detail-wrap {
   display: flex;
   align-items: center;
   gap: 8px;
   cursor: pointer;
 }
-.delivery-main .parcel-details .container .detail .detail-wrap p {
+.delivery-main .container .parcel-details .container .detail .detail-wrap p {
   display: flex;
   align-items: center;
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
@@ -1430,14 +1455,14 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   text-wrap: wrap;
 }
 @media (max-width: 1300px) {
-  .delivery-main .parcel-details .container .detail .detail-wrap p {
+  .delivery-main .container .parcel-details .container .detail .detail-wrap p {
     margin-left: 20px;
   }
 }
-.delivery-main .parcel-details .container .detail .detail-wrap p.checked::before {
+.delivery-main .container .parcel-details .container .detail .detail-wrap p.checked::before {
   border: 2px solid #1a64db;
 }
-.delivery-main .parcel-details .container .detail .detail-wrap p.checked::after {
+.delivery-main .container .parcel-details .container .detail .detail-wrap p.checked::after {
   content: "";
   position: absolute;
   width: 16px;
@@ -1447,7 +1472,7 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   background: #1a64db;
   border-radius: 50%;
 }
-.delivery-main .parcel-details .container .detail .detail-wrap p::before {
+.delivery-main .container .parcel-details .container .detail .detail-wrap p::before {
   content: "";
   position: absolute;
   width: 24px;
@@ -1465,7 +1490,7 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-.delivery-main .parcel-details .container .detail .with-information-input {
+.delivery-main .container .parcel-details .container .detail .with-information-input {
   display: none;
   border-radius: 4px;
   border: 1px solid var(--Stroke-CDCED7, #cdced7);
@@ -1482,25 +1507,25 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   max-width: 300px;
   margin-left: 40px;
 }
-.delivery-main .parcel-details .container .detail .with-information-input.active {
+.delivery-main .container .parcel-details .container .detail .with-information-input.active {
   display: flex;
 }
-.delivery-main .parcel-details .container .whats-package {
+.delivery-main .container .parcel-details .container .whats-package {
   display: none;
 }
-.delivery-main .parcel-details .container .whats-package.active {
+.delivery-main .container .parcel-details .container .whats-package.active {
   display: block;
 }
-.delivery-main .parcel-details .container .whats-package h5 {
+.delivery-main .container .parcel-details .container .whats-package h5 {
   margin-bottom: 16px;
 }
-.delivery-main .parcel-details .container .whats-package .whats-package-wrap-content {
+.delivery-main .container .parcel-details .container .whats-package .whats-package-wrap-content {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 32px;
 }
-.delivery-main .parcel-details .container .whats-package .whats-package-wrap-content .whats-package-wrap {
+.delivery-main .container .parcel-details .container .whats-package .whats-package-wrap-content .whats-package-wrap {
   cursor: pointer;
   border-radius: 24px;
   background: var(--Shades-White, #fff);
@@ -1511,7 +1536,7 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   gap: 8px;
   position: relative;
 }
-.delivery-main .parcel-details .container .whats-package .whats-package-wrap-content .whats-package-wrap p {
+.delivery-main .container .parcel-details .container .whats-package .whats-package-wrap-content .whats-package-wrap p {
   display: flex;
   margin-left: 16px;
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
@@ -1522,12 +1547,12 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   line-height: normal;
   align-items: center;
 }
-.delivery-main .parcel-details .container .whats-package .whats-package-wrap-content .whats-package-wrap p.checked::before {
+.delivery-main .container .parcel-details .container .whats-package .whats-package-wrap-content .whats-package-wrap p.checked::before {
   content: url(../../photo/check-box-tick.svg);
   border: 2px solid #1a64db;
   background: #1a64db;
 }
-.delivery-main .parcel-details .container .whats-package .whats-package-wrap-content .whats-package-wrap p::before {
+.delivery-main .container .parcel-details .container .whats-package .whats-package-wrap-content .whats-package-wrap p::before {
   content: "";
   position: absolute;
   width: 24px;
@@ -1545,7 +1570,7 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
 }
-.delivery-main .parcel-details .container .whats-package .whats-package-wrap-content .whats-package-wrap input {
+.delivery-main .container .parcel-details .container .whats-package .whats-package-wrap-content .whats-package-wrap input {
   height: 0;
   width: 0;
   border: none;
@@ -1553,7 +1578,7 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   gap: 0;
   margin-bottom: 0;
 }
-.delivery-main .parcel-details .container .whats-package input {
+.delivery-main .container .parcel-details .container .whats-package input {
   width: 100%;
   border: none;
   border-radius: 4px;
@@ -1573,54 +1598,55 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   margin-bottom: 40px;
 }
 
-.parcels-page {
+.parcel-wrapper {
   background: var(--Background-White-FFFFFF, #fff);
 }
-.parcels-page .parcel-wrapper .container .shipping-instructions {
+.parcel-wrapper .container .shipping-instructions {
   margin: 0px -120px -80px -120px;
   padding: 80px 120px;
   background: #f9f9fb;
 }
 @media (max-width: 1350px) {
-  .parcels-page .parcel-wrapper .container .shipping-instructions {
+  .parcel-wrapper .container .shipping-instructions {
     margin: 0px -60px -80px -60px;
     padding: 70px 60px;
   }
 }
 @media (max-width: 1040px) {
-  .parcels-page .parcel-wrapper .container .shipping-instructions {
+  .parcel-wrapper .container .shipping-instructions {
     margin: 0px -30px -80px -30px;
     padding: 80px 30px;
   }
 }
 @media (max-width: 800px) {
-  .parcels-page .parcel-wrapper .container .shipping-instructions {
+  .parcel-wrapper .container .shipping-instructions {
     margin: 0px -16px -80px -16px;
     padding: 80px 16px;
   }
 }
 @media (max-width: 800px) {
-  .parcels-page .parcel-wrapper .container .shipping-instructions {
+  .parcel-wrapper .container .shipping-instructions {
     padding-top: 0;
   }
 }
-.parcels-page .parcel-wrapper .container .shipping-instructions .container {
+.parcel-wrapper .container .shipping-instructions .container {
   display: flex;
   flex-direction: column;
+  gap: 80px;
 }
-.parcels-page .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content {
+.parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content {
   display: flex;
   align-items: start;
   justify-content: space-between;
   gap: 34px;
 }
 @media (max-width: 800px) {
-  .parcels-page .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content {
+  .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content {
     flex-direction: column;
     gap: 24px;
   }
 }
-.parcels-page .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .img-wrapper {
+.parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .img-wrapper {
   overflow: hidden;
   border-radius: 16px;
   max-width: 584px;
@@ -1628,7 +1654,7 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   width: 100%;
 }
 @media (max-width: 800px) {
-  .parcels-page .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .img-wrapper {
+  .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .img-wrapper {
     padding-top: 0;
     max-width: calc(100% + 32px);
     min-width: calc(100% + 32px);
@@ -1641,7 +1667,7 @@ header .container .header-body .header-menu .select-for-mobile ul div {
     margin: 0px -16px;
   }
 }
-.parcels-page .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .img-wrapper img {
+.parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .img-wrapper img {
   max-width: 584px;
   min-width: 400px;
   width: 100%;
@@ -1649,49 +1675,49 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   flex-shrink: 0;
 }
 @media (max-width: 800px) {
-  .parcels-page .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .img-wrapper img {
+  .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .img-wrapper img {
     max-width: calc(100% + 32px);
     min-width: calc(100% + 32px);
     width: calc(100% + 32px);
   }
 }
-.parcels-page .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-ua-to-cz-content,
-.parcels-page .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-cz-to-ua-content {
+.parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-ua-to-cz-content,
+.parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-cz-to-ua-content {
   max-width: 584px;
   width: 100%;
 }
 @media (max-width: 800px) {
-  .parcels-page .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-ua-to-cz-content,
-  .parcels-page .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-cz-to-ua-content {
+  .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-ua-to-cz-content,
+  .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-cz-to-ua-content {
     max-width: 100%;
   }
 }
-.parcels-page .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-ua-to-cz-content h3,
-.parcels-page .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-cz-to-ua-content h3 {
+.parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-ua-to-cz-content h3,
+.parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-cz-to-ua-content h3 {
   font-size: 32px;
   margin-bottom: 24px;
 }
 @media (max-width: 800px) {
-  .parcels-page .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-ua-to-cz-content h3,
-  .parcels-page .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-cz-to-ua-content h3 {
+  .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-ua-to-cz-content h3,
+  .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-cz-to-ua-content h3 {
     font-size: 26px;
   }
 }
-.parcels-page .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-ua-to-cz-content .text-content,
-.parcels-page .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-cz-to-ua-content .text-content {
+.parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-ua-to-cz-content .text-content,
+.parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-cz-to-ua-content .text-content {
   display: flex;
   flex-direction: column;
 }
-.parcels-page .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-ua-to-cz-content .text-content.shipping-instructions-text-block1,
-.parcels-page .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-cz-to-ua-content .text-content.shipping-instructions-text-block1 {
+.parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-ua-to-cz-content .text-content.shipping-instructions-text-block1,
+.parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-cz-to-ua-content .text-content.shipping-instructions-text-block1 {
   gap: 8px;
 }
-.parcels-page .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-ua-to-cz-content .text-content.shipping-instructions-text-block2,
-.parcels-page .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-cz-to-ua-content .text-content.shipping-instructions-text-block2 {
+.parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-ua-to-cz-content .text-content.shipping-instructions-text-block2,
+.parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-cz-to-ua-content .text-content.shipping-instructions-text-block2 {
   gap: 16px;
 }
-.parcels-page .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-ua-to-cz-content .text-content p,
-.parcels-page .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-cz-to-ua-content .text-content p {
+.parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-ua-to-cz-content .text-content p,
+.parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-cz-to-ua-content .text-content p {
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
   font-family: "Google Sans";
   font-size: 16px;
@@ -1700,48 +1726,48 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   line-height: 140%;
   text-wrap: wrap;
 }
-.parcels-page .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-ua-to-cz-content .text-content p.text-icon,
-.parcels-page .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-cz-to-ua-content .text-content p.text-icon {
+.parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-ua-to-cz-content .text-content p.text-icon,
+.parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-cz-to-ua-content .text-content p.text-icon {
   margin-top: 8px;
 }
 @media (max-width: 800px) {
-  .parcels-page .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-ua-to-cz-content .text-content p.text-icon,
-  .parcels-page .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-cz-to-ua-content .text-content p.text-icon {
+  .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-ua-to-cz-content .text-content p.text-icon,
+  .parcel-wrapper .container .shipping-instructions .container .shipping-instructions-content .from-cz-to-ua-content .text-content p.text-icon {
     margin-top: 16px;
   }
 }
 
-.courier-call {
-  padding: 0;
+.section-curier-call {
   padding-top: 24px;
+  margin-top: 75px;
 }
-.courier-call .section-curier-call .container .title-nav-wrapper {
+.section-curier-call .container .title-nav-wrapper {
   background: var(--Background-White-FFFFFF, #fff);
   margin: 0px 120px;
 }
 @media (max-width: 1350px) {
-  .courier-call .section-curier-call .container .title-nav-wrapper {
+  .section-curier-call .container .title-nav-wrapper {
     margin: 0px 60px;
   }
 }
 @media (max-width: 1040px) {
-  .courier-call .section-curier-call .container .title-nav-wrapper {
+  .section-curier-call .container .title-nav-wrapper {
     margin: 0px 30px;
   }
 }
 @media (max-width: 800px) {
-  .courier-call .section-curier-call .container .title-nav-wrapper {
+  .section-curier-call .container .title-nav-wrapper {
     margin: 0px 16px;
   }
 }
-.courier-call .section-curier-call .container .main-content {
+.section-curier-call .container .courier-call-main-content {
   background: #f9f9fb;
 }
-.courier-call .section-curier-call .container .main-content .container {
+.section-curier-call .container .courier-call-main-content .container {
   display: flex;
   flex-direction: column;
 }
-.courier-call .section-curier-call .container .main-content .container .courier-bg {
+.section-curier-call .container .courier-call-main-content .container .courier-bg {
   height: 500px;
   width: 100%;
   background-image: url("../../photo/courier-page/bg.png");
@@ -1752,16 +1778,16 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   justify-content: end;
 }
 @media (max-width: 1040px) {
-  .courier-call .section-curier-call .container .main-content .container .courier-bg {
+  .section-curier-call .container .courier-call-main-content .container .courier-bg {
     height: 400px;
   }
 }
 @media (max-width: 800px) {
-  .courier-call .section-curier-call .container .main-content .container .courier-bg {
+  .section-curier-call .container .courier-call-main-content .container .courier-bg {
     height: 285px;
   }
 }
-.courier-call .section-curier-call .container .main-content .container .courier-bg .title-logo {
+.section-curier-call .container .courier-call-main-content .container .courier-bg .title-logo {
   background-image: url("../../photo/courier-page/Group 53.png");
   background-size: cover;
   background-position: center;
@@ -1774,48 +1800,48 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   margin-right: 300px;
 }
 @media (max-width: 1350px) {
-  .courier-call .section-curier-call .container .main-content .container .courier-bg .title-logo {
+  .section-curier-call .container .courier-call-main-content .container .courier-bg .title-logo {
     margin-right: 150px;
   }
 }
 @media (max-width: 1040px) {
-  .courier-call .section-curier-call .container .main-content .container .courier-bg .title-logo {
+  .section-curier-call .container .courier-call-main-content .container .courier-bg .title-logo {
     margin-right: 120px;
     width: 280px;
     height: 280px;
   }
 }
 @media (max-width: 800px) {
-  .courier-call .section-curier-call .container .main-content .container .courier-bg .title-logo {
+  .section-curier-call .container .courier-call-main-content .container .courier-bg .title-logo {
     margin-right: 66px;
     width: 120px;
     height: 120px;
   }
 }
-.courier-call .section-curier-call .container .main-content .container .courier-bg .title-logo .header-logo-title {
+.section-curier-call .container .courier-call-main-content .container .courier-bg .title-logo .header-logo-title {
   margin-bottom: 35px;
 }
 @media (max-width: 800px) {
-  .courier-call .section-curier-call .container .main-content .container .courier-bg .title-logo .header-logo-title {
+  .section-curier-call .container .courier-call-main-content .container .courier-bg .title-logo .header-logo-title {
     margin-bottom: 10px;
   }
 }
-.courier-call .section-curier-call .container .main-content .container .courier-bg .title-logo .header-logo-title p {
+.section-curier-call .container .courier-call-main-content .container .courier-bg .title-logo .header-logo-title p {
   font-size: 55.198px;
   text-wrap: nowrap;
 }
 @media (max-width: 1040px) {
-  .courier-call .section-curier-call .container .main-content .container .courier-bg .title-logo .header-logo-title p {
+  .section-curier-call .container .courier-call-main-content .container .courier-bg .title-logo .header-logo-title p {
     font-size: 38px;
   }
 }
 @media (max-width: 800px) {
-  .courier-call .section-curier-call .container .main-content .container .courier-bg .title-logo .header-logo-title p {
+  .section-curier-call .container .courier-call-main-content .container .courier-bg .title-logo .header-logo-title p {
     font-size: 16px;
   }
 }
 @media (max-width: 800px) {
-  .courier-call .section-curier-call .container .main-content .container .courier-bg .title-logo .header-logo-title svg {
+  .section-curier-call .container .courier-call-main-content .container .courier-bg .title-logo .header-logo-title svg {
     width: 15px;
     width: 50px;
   }
@@ -1828,16 +1854,19 @@ header .container .header-body .header-menu .select-for-mobile ul div {
 @media (max-width: 1350px) {
   .write-and-city {
     margin: 0px 60px;
+    margin-bottom: 35px;
   }
 }
 @media (max-width: 1040px) {
   .write-and-city {
     margin: 0px 30px;
+    margin-bottom: 35px;
   }
 }
 @media (max-width: 800px) {
   .write-and-city {
     margin: 0px 16px;
+    margin-bottom: 35px;
   }
 }
 .write-and-city .write-inst {
@@ -2000,16 +2029,35 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   line-height: normal;
 }
 
-.track-the-parcel {
+.content-wrapper {
   background: #f2f2f5;
+  margin-top: 75px;
+  padding: 0px 120px;
+  padding-top: 24px;
   padding-bottom: 80px;
 }
+@media (max-width: 1350px) {
+  .content-wrapper {
+    padding: 0px 60px;
+    padding-top: 24px;
+    padding-bottom: 80px;
+  }
+}
 @media (max-width: 1040px) {
-  .track-the-parcel {
+  .content-wrapper {
+    padding: 0px 30px;
+    padding-top: 24px;
     padding-bottom: 48px;
   }
 }
-.track-the-parcel .content-wrapper .container .location-block {
+@media (max-width: 800px) {
+  .content-wrapper {
+    padding: 16px;
+    padding-top: 24px;
+    padding-bottom: 48px;
+  }
+}
+.content-wrapper .container .location-block {
   border-radius: 8px;
   background: #fff;
   padding: 32px 40px;
@@ -2017,16 +2065,16 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   margin-bottom: 19px;
 }
 @media (max-width: 550px) {
-  .track-the-parcel .content-wrapper .container .location-block {
+  .content-wrapper .container .location-block {
     display: none;
   }
 }
-.track-the-parcel .content-wrapper .container .location-block .container {
+.content-wrapper .container .location-block .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.track-the-parcel .content-wrapper .container .location-block .container .location {
+.content-wrapper .container .location-block .container .location {
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
   font-family: "Google Sans";
   font-size: 16px;
@@ -2034,13 +2082,13 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   font-weight: 700;
   line-height: normal;
 }
-.track-the-parcel .content-wrapper .container .location-block .container .track-number {
+.content-wrapper .container .location-block .container .track-number {
   display: flex;
   align-items: center;
   cursor: pointer;
   gap: 8px;
 }
-.track-the-parcel .content-wrapper .container .location-block .container .track-number .number {
+.content-wrapper .container .location-block .container .track-number .number {
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
   font-family: "Google Sans";
   font-size: 16px;
@@ -2048,14 +2096,14 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   font-weight: 700;
   line-height: normal;
 }
-.track-the-parcel .content-wrapper .container .route-parcel {
+.content-wrapper .container .route-parcel {
   padding: 32px 40px;
   border-radius: 8px;
   background: #fff;
   max-width: 720px;
 }
 @media (max-width: 550px) {
-  .track-the-parcel .content-wrapper .container .route-parcel {
+  .content-wrapper .container .route-parcel {
     padding: 32px 16px;
     max-width: calc(100% + 32px);
     border-radius: 0;
@@ -2066,41 +2114,41 @@ header .container .header-body .header-menu .select-for-mobile ul div {
     margin: 0px -16px;
   }
 }
-.track-the-parcel .content-wrapper .container .route-parcel h3 {
+.content-wrapper .container .route-parcel h3 {
   margin-bottom: 26px;
 }
-.track-the-parcel .content-wrapper .container .route-parcel .route-place {
+.content-wrapper .container .route-parcel .route-place {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 8px;
 }
 @media (max-width: 600px) {
-  .track-the-parcel .content-wrapper .container .route-parcel .route-place {
+  .content-wrapper .container .route-parcel .route-place {
     flex-direction: column;
     align-items: flex-start;
   }
 }
-.track-the-parcel .content-wrapper .container .route-parcel .route-place .wrapper {
+.content-wrapper .container .route-parcel .route-place .wrapper {
   display: flex;
   align-items: center;
   gap: 24px;
 }
-.track-the-parcel .content-wrapper .container .route-parcel .route-place .wrapper h6 {
+.content-wrapper .container .route-parcel .route-place .wrapper h6 {
   font-size: 16px;
   text-align: left;
 }
-.track-the-parcel .content-wrapper .container .route-parcel .route-place .data-and-time {
+.content-wrapper .container .route-parcel .route-place .data-and-time {
   display: flex;
   align-items: center;
 }
 @media (max-width: 600px) {
-  .track-the-parcel .content-wrapper .container .route-parcel .route-place .data-and-time {
+  .content-wrapper .container .route-parcel .route-place .data-and-time {
     margin-left: 50px;
   }
 }
-.track-the-parcel .content-wrapper .container .route-parcel .route-place .data-and-time .data,
-.track-the-parcel .content-wrapper .container .route-parcel .route-place .data-and-time .time {
+.content-wrapper .container .route-parcel .route-place .data-and-time .data,
+.content-wrapper .container .route-parcel .route-place .data-and-time .time {
   color: var(--Accesible-text-Additional-62636C, #62636c);
   font-family: "Google Sans";
   font-size: 16px;
@@ -2108,21 +2156,21 @@ header .container .header-body .header-menu .select-for-mobile ul div {
   font-weight: 400;
   line-height: normal;
 }
-.track-the-parcel .content-wrapper .container .route-parcel .route-place .data-and-time .data {
+.content-wrapper .container .route-parcel .route-place .data-and-time .data {
   border-right: 1px solid #cdced7;
   padding-right: 8px;
 }
-.track-the-parcel .content-wrapper .container .route-parcel .route-place .data-and-time .time {
+.content-wrapper .container .route-parcel .route-place .data-and-time .time {
   padding-left: 8px;
 }
-.track-the-parcel .content-wrapper .container .route-parcel .gaps {
+.content-wrapper .container .route-parcel .gaps {
   border-left: 1px dashed #cdced7;
   height: 27px;
   margin-left: 12px;
   position: relative;
 }
 @media (max-width: 600px) {
-  .track-the-parcel .content-wrapper .container .route-parcel .gaps::before {
+  .content-wrapper .container .route-parcel .gaps::before {
     content: "";
     position: absolute;
     border-left: 1px dashed #cdced7;
