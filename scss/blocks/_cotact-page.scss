@@ -3,12 +3,6 @@ body {
   main {
     padding: 0px 120px;
     position: relative;
-    .chat {
-      position: absolute;
-      cursor: pointer;
-      right: 60px;
-      top: 100%;
-    }
     .main-content {
       margin-top: 56px;
       margin-bottom: 98px;
@@ -132,15 +126,6 @@ body {
   body {
     main {
       padding: 0px 60px;
-      .chat {
-        svg {
-          transform: scale(0.8);
-          -webkit-transform: scale(0.8);
-          -moz-transform: scale(0.8);
-          -ms-transform: scale(0.8);
-          -o-transform: scale(0.8);
-        }
-      }
       .main-content {
         .container {
           .main-info {
@@ -194,10 +179,6 @@ body {
     main {
       padding: 16px;
       padding-bottom: 48px;
-      .chat {
-        right: 20px;
-        top: 90%;
-      }
       .main-content {
         margin: 0;
         .container {

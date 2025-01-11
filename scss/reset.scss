@@ -124,6 +124,13 @@ body {
 main {
   padding-top: 24px !important;
   padding-bottom: 80px !important;
+  position: relative;
+  .chat {
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    top: calc(100vh / 2);
+  }
 }
 .main-nav {
   width: 100%;

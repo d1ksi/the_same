@@ -603,12 +603,6 @@ body main {
   padding: 0px 120px;
   position: relative;
 }
-body main .chat {
-  position: absolute;
-  cursor: pointer;
-  right: 60px;
-  top: 100%;
-}
 body main .main-content {
   margin-top: 56px;
   margin-bottom: 98px;
@@ -722,13 +716,6 @@ body main .main-content .container .contact-block form button {
   body main {
     padding: 0px 60px;
   }
-  body main .chat svg {
-    transform: scale(0.8);
-    -webkit-transform: scale(0.8);
-    -moz-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    -o-transform: scale(0.8);
-  }
   body main .main-content .container .main-info {
     display: flex;
     flex-direction: column;
@@ -767,10 +754,6 @@ body main .main-content .container .contact-block form button {
   body main {
     padding: 16px;
     padding-bottom: 48px;
-  }
-  body main .chat {
-    right: 20px;
-    top: 90%;
   }
   body main .main-content {
     margin: 0;

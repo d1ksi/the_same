@@ -124,6 +124,13 @@ body::-webkit-scrollbar-thumb {
 main {
   padding-top: 24px !important;
   padding-bottom: 80px !important;
+  position: relative;
+}
+main .chat {
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  top: 50vh;
 }
 
 .main-nav {
