@@ -1,3 +1,62 @@
+
+const buttons = document.querySelectorAll('.title-btn, .needed-for-translation-btn, .compare-btn');
+const popupOverlay = document.querySelector('.popup-overlay');
+const closeButton = popupOverlay ? popupOverlay.querySelector('.close') : null;
+const methods = popupOverlay ? popupOverlay.querySelectorAll('.method') : null;
+if (popupOverlay) {
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      popupOverlay.classList.add('active');
+    });
+  });
+  if (closeButton) {
+    closeButton.addEventListener('click', () => {
+      popupOverlay.classList.remove('active');
+    });
+  }
+  if (methods) {
+    methods.forEach(method => {
+      method.addEventListener('click', () => {
+        if (method.classList.contains('active')) {
+          method.classList.remove('active');
+        } else {
+          methods.forEach(m => m.classList.remove('active'));
+          method.classList.add('active');
+        }
+      });
+    });
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 document.querySelector('.toggle-icon').addEventListener('click', () => {
     const selectedList = document.querySelector('.selected-list');
     selectedList.classList.toggle('active');
@@ -369,3 +428,9 @@ document.querySelectorAll('.rout-wrap').forEach(route => {
       updateTipsBasedOnRoute();
   });
 });
+
+
+
+
+
+
