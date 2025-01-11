@@ -1,101 +1,86 @@
 .courier-call {
-  background: var(--Background-White-FFFFFF, #fff);
-  .title-wrap {
-    margin-top: 56px;
-    margin-bottom: 40px;
-    @media (max-width: 800px) {
-      margin: 24px 0px;
-    }
-  }
-  .section-main-content {
-    margin: 0px -120px -80px -120px;
-    padding: 80px 120px;
-    background: #f9f9fb;
-    @media (max-width: 1350px) {
-      margin: 0px -60px -80px -60px;
-      padding: 70px 60px;
-    }
-    @media (max-width: 1040px) {
-      margin: 0px -30px -80px -30px;
-      padding: 80px 30px;
-    }
-    @media (max-width: 800px) {
-      margin: 0px -16px -80px -16px;
-      padding: 80px 16px;
-    }
-    @media (max-width: 800px) {
-      padding-top: 48px;
-    }
+  padding: 0;
+  padding-top: 24px;
+  .section-curier-call {
     .container {
-      display: flex;
-      flex-direction: column;
-      .courier-bg {
-        margin: 0px -120px;
-        height: 500px;
-        width: calc(100% + 240px);
-        background-image: url("../../photo/courier-page/bg.png");
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        align-items: center;
-        justify-content: end;
+      .title-nav-wrapper {
+        background: var(--Background-White-FFFFFF, #fff);
+        margin: 0px 120px;
         @media (max-width: 1350px) {
-          margin: 0px -60px;
-          width: calc(100% + 120px);
+          margin: 0px 60px;
         }
         @media (max-width: 1040px) {
-          margin: 0px -30px;
-          width: calc(100% + 60px);
-          height: 400px;
+          margin: 0px 30px;
         }
         @media (max-width: 800px) {
-          margin: 0px -16px;
-          width: calc(100% + 32px);
-          height: 200px;
+          margin: 0px 16px;
         }
-        .title-logo {
-          background-image: url("../../photo/courier-page/Group\ 53.png");
-          background-size: cover;
-          background-position: center;
-          z-index: 2;
-          width: 380px;
-          height: 380px;
+      }
+      .main-content {
+        background: #f9f9fb;
+        .container {
           display: flex;
-          align-items: end;
-          justify-content: center;
-          margin-right: 300px;
-          @media (max-width: 1350px) {
-            margin-right: 150px;
-          }
-          @media (max-width: 1040px) {
-            margin-right: 120px;
-            width: 280px;
-            height: 280px;
-          }
-          @media (max-width: 800px) {
-            margin-right: 66px;
-            width: 120px;
-            height: 120px;
-          }
-          .header-logo-title {
-            margin-bottom: 35px;
+          flex-direction: column;
+          .courier-bg {
+            height: 500px;
+            width: 100%;
+            background-image: url("../../photo/courier-page/bg.png");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            @media (max-width: 1040px) {
+              height: 400px;
+            }
             @media (max-width: 800px) {
-              margin-bottom: 10px;
+              height: 285px;
             }
-            p {
-              font-size: 55.198px;
-              text-wrap: nowrap;
+            .title-logo {
+              background-image: url("../../photo/courier-page/Group\ 53.png");
+              background-size: cover;
+              background-position: center;
+              z-index: 2;
+              width: 380px;
+              height: 380px;
+              display: flex;
+              align-items: end;
+              justify-content: center;
+              margin-right: 300px;
+              @media (max-width: 1350px) {
+                margin-right: 150px;
+              }
               @media (max-width: 1040px) {
-                font-size: 38px;
+                margin-right: 120px;
+                width: 280px;
+                height: 280px;
               }
               @media (max-width: 800px) {
-                font-size: 16px;
+                margin-right: 66px;
+                width: 120px;
+                height: 120px;
               }
-            }
-            svg {
-              @media (max-width: 800px) {
-                width: 15px;
-                width: 50px;
+              .header-logo-title {
+                margin-bottom: 35px;
+                @media (max-width: 800px) {
+                  margin-bottom: 10px;
+                }
+                p {
+                  font-size: 55.198px;
+                  text-wrap: nowrap;
+                  @media (max-width: 1040px) {
+                    font-size: 38px;
+                  }
+                  @media (max-width: 800px) {
+                    font-size: 16px;
+                  }
+                }
+                svg {
+                  @media (max-width: 800px) {
+                    width: 15px;
+                    width: 50px;
+                  }
+                }
               }
             }
           }
