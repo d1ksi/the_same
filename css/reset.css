@@ -127,10 +127,34 @@ main {
   position: relative;
 }
 main .chat {
+  z-index: 999;
   cursor: pointer;
   position: fixed;
   right: 20px;
   top: 50vh;
+}
+
+.header-logo-title {
+  display: flex;
+  flex-direction: column;
+}
+.header-logo-title p {
+  font-family: "Montserrat";
+  font-size: 35.041px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  letter-spacing: 5.957px;
+  text-transform: uppercase;
+  background: linear-gradient(93deg, #000 39.62%, #0b449d 90.15%, #0b449d 90.15%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.header-logo-title svg {
+  align-self: flex-end;
+  margin-top: -5px;
+  margin-right: 5px;
 }
 
 .main-nav {
@@ -146,13 +170,19 @@ main .chat {
   font-weight: 400;
   line-height: normal;
 }
+@media (max-width: 500px) {
+  .main-nav a,
+  .main-nav span {
+    font-size: 12px;
+  }
+}
 .main-nav span {
   color: var(--Accesible-text-Additional-62636C, #62636c);
 }
 
 .title {
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
-  font-family: "Open Sans";
+  font-family: "Google Sans";
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
@@ -171,7 +201,7 @@ main .chat {
 
 h3 {
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
-  font-family: "Open Sans";
+  font-family: "Google Sans";
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -186,7 +216,7 @@ h3 {
 h6 {
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
   text-align: center;
-  font-family: "Open Sans";
+  font-family: "Google Sans";
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
@@ -197,7 +227,7 @@ label,
 h5,
 .hint {
   color: var(--Accesible-text-Additional-62636C, #62636c);
-  font-family: "Open Sans";
+  font-family: "Google Sans";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -211,7 +241,7 @@ h5,
 
 .selected {
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
-  font-family: "Open Sans";
+  font-family: "Google Sans";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -314,7 +344,7 @@ button,
 }
 .tips .content .content-text ul li {
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
-  font-family: "Open Sans";
+  font-family: "Google Sans";
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -324,7 +354,7 @@ button,
 .tips .content .content-text p,
 .tips .content .content-text h4 {
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
-  font-family: "Open Sans";
+  font-family: "Google Sans";
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
