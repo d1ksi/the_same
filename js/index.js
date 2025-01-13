@@ -40,6 +40,107 @@ if (popupOverlay) {
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const exchangeBlocks = document.querySelectorAll(".block-exchange");
+  if (exchangeBlocks.length === 0) return;
+  exchangeBlocks.forEach((block) => {
+      const selectedWrapper = block.querySelector(".selected-block-wrapper");
+      const dropdown = block.querySelector(".dropdown");
+      const selectedBlock = block.querySelector(".selected-block");
+      const listItems = dropdown.querySelectorAll("li");
+
+      const updateSelectedContent = () => {
+          const selectedItem = dropdown.querySelector("li.selected");
+          if (selectedItem) {
+              const text = selectedItem.querySelector("p").textContent;
+              const imgSrc = selectedItem.querySelector("img").getAttribute("src");
+
+              selectedBlock.innerHTML = `
+                  <p>${text}</p>
+                  <img src="${imgSrc}" alt="">
+              `;
+          }
+      };
+      updateSelectedContent();
+      selectedWrapper.addEventListener("click", (event) => {
+          if (selectedWrapper.classList.contains("active")) {
+              selectedWrapper.classList.remove("active");
+              dropdown.classList.remove("active");
+          } else {
+              selectedWrapper.classList.add("active");
+              dropdown.classList.add("active");
+          }
+          event.stopPropagation();
+      });
+     listItems.forEach((item) => {
+          item.addEventListener("click", (event) => {
+              dropdown.querySelector("li.selected")?.classList.remove("selected");
+              item.classList.add("selected");
+              updateSelectedContent();
+              dropdown.classList.remove("active");
+              selectedWrapper.classList.remove("active");
+              event.stopPropagation();
+          });
+      });
+      document.addEventListener("click", (event) => {
+          if (!block.contains(event.target)) {
+              dropdown.classList.remove("active");
+              selectedWrapper.classList.remove("active");
+          }
+      });
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+const switchElement = document.querySelector('.swith');
+if (switchElement) {
+  switchElement.addEventListener('click', function () {
+    const block = document.querySelector('.block-exchange-wrapper');
+    if (block) {
+      block.classList.toggle('active');
+    }
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const exchangeBtn = document.querySelector('.exchange-btn');
+  const popupOverlay = document.querySelector('.popup-overlay');
+  const closeBtn = document.querySelector('.close');
+  exchangeBtn.addEventListener('click', function () {
+    popupOverlay.classList.add('active');
+  });
+  closeBtn.addEventListener('click', function () {
+    popupOverlay.classList.remove('active');
+  });
+});
+
+
+
+
+
+
 
 
 
@@ -353,21 +454,16 @@ if (target) {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Находим все кнопки с классом accessibly
   const accessiblyButtons = document.querySelectorAll('.accessibly');
-  
-  // Находим все элементы SVG
   const svgElements = document.querySelectorAll('svg.hint-circle');
-  
-  // Обработчик для кнопок с классом accessibly
   accessiblyButtons.forEach(button => {
     button.addEventListener('click', () => {
       const tipsBlock = button.closest('.tips');
       if (tipsBlock) {
-        tipsBlock.classList.remove('active'); // Закрываем блок
+        tipsBlock.classList.remove('active');
         const svgElement = tipsBlock.querySelector('svg.hint-circle');
         if (svgElement) {
-          svgElement.classList.add('hidden'); // Скрываем SVG
+          svgElement.classList.add('hidden');
         }
       }
     });

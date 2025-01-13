@@ -151,21 +151,40 @@ body::-webkit-scrollbar-thumb {
 }
 
 .base-margin {
-  margin: 0px 120px;
+  margin: 0px 120px !important;
 }
 @media (max-width: 1350px) {
   .base-margin {
-    margin: 0px 60px;
+    margin: 0px 60px !important;
   }
 }
 @media (max-width: 1040px) {
   .base-margin {
-    margin: 0px 30px;
+    margin: 0px 30px !important;
   }
 }
 @media (max-width: 800px) {
   .base-margin {
-    margin: 16px;
+    margin: 16px !important;
+  }
+}
+
+.base-padding {
+  padding: 80px 120px;
+}
+@media (max-width: 1350px) {
+  .base-padding {
+    padding: 80px 60px;
+  }
+}
+@media (max-width: 1040px) {
+  .base-padding {
+    padding: 48px 30px;
+  }
+}
+@media (max-width: 800px) {
+  .base-padding {
+    padding: 48px 16px;
   }
 }
 
@@ -173,7 +192,7 @@ body::-webkit-scrollbar-thumb {
   position: relative;
 }
 .with-chat .chat {
-  z-index: 999;
+  z-index: 666;
   cursor: pointer;
   position: fixed;
   right: 20px;
@@ -237,7 +256,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media (max-width: 800px) {
   .title-wrap {
-    margin: 24px 0px;
+    margin: 24px;
   }
 }
 .title-wrap .container .title {
@@ -299,7 +318,8 @@ h5,
   font-size: 12px;
 }
 
-.selected {
+.selected,
+.base-text {
   color: var(--Accesible-text-Main-1E1F24, #1e1f24);
   font-family: "Google Sans";
   font-size: 16px;
@@ -478,7 +498,7 @@ button,
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 120;
+  z-index: 999;
   width: 100vw;
   height: 100vh;
   background-color: rgba(242, 242, 245, 0.5);
